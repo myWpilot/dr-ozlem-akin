@@ -33,7 +33,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
     nav {
       position: sticky;
       top: 0;
@@ -72,13 +71,11 @@
 
     .nav-links a:hover { color: var(--blue); }
 
-    /* Mobile nav: hide text labels on very small screens */
     @media (max-width: 480px) {
       .nav-links { gap: 0.6rem; }
       .nav-links a { font-size: 0.78rem; }
     }
 
-    /* ── HERO ── */
     .hero {
       min-height: calc(100svh - 60px);
       display: grid;
@@ -158,7 +155,6 @@
       transform: translateY(-2px);
     }
 
-    /* Hero image */
     .hero-image-wrap {
       display: flex;
       flex-direction: column;
@@ -182,7 +178,6 @@
       object-position: top center;
     }
 
-    /* Stats row */
     .stats {
       display: flex;
       gap: 1.5rem;
@@ -210,7 +205,6 @@
       margin-top: 0.2rem;
     }
 
-    /* ── SECTIONS ── */
     section {
       padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 8vw, 6rem);
     }
@@ -238,7 +232,6 @@
       color: var(--blue);
     }
 
-    /* ── KARİYER ── */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -252,14 +245,10 @@
       gap: 1rem 2rem;
       padding: 1.5rem 0;
       border-bottom: 1px solid #E5EAF0;
-      position: relative;
     }
 
     @media (max-width: 560px) {
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 0.3rem;
-      }
+      .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; }
     }
 
     .timeline-date {
@@ -294,7 +283,6 @@
       margin-bottom: 0.4rem;
     }
 
-    /* ── ÜYELİKLER ── */
     .memberships {
       display: flex;
       flex-direction: column;
@@ -320,7 +308,6 @@
       flex-shrink: 0;
     }
 
-    /* ── UZMANLIK ── */
     .expertise-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -365,7 +352,6 @@
       color: var(--text-body);
     }
 
-    /* ── YAYINLAR ── */
     .pub-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -394,7 +380,75 @@
       margin-top: 0.3rem;
     }
 
-    /* ── HASTA YORUMLARI ── */
+    /* REVIEWS */
+    .reviews-summary {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: white;
+      border: 1px solid #E5EAF0;
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+
+    .reviews-score {
+      text-align: center;
+    }
+
+    .reviews-score-num {
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--blue);
+      line-height: 1;
+    }
+
+    .reviews-score-stars {
+      color: #F59E0B;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin: 0.3rem 0;
+    }
+
+    .reviews-score-label {
+      font-size: 0.78rem;
+      color: var(--text-body);
+    }
+
+    .reviews-breakdown {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .breakdown-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--text-body);
+    }
+
+    .breakdown-label { width: 70px; }
+
+    .breakdown-bar {
+      flex: 1;
+      height: 6px;
+      background: #E5EAF0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .breakdown-fill {
+      height: 100%;
+      background: var(--blue);
+      border-radius: 3px;
+    }
+
+    .breakdown-val { width: 24px; text-align: right; font-weight: 500; color: var(--blue); }
+
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -457,7 +511,6 @@
 
     .reviews-link:hover { color: var(--blue-dark); }
 
-    /* ── İLETİŞİM ── */
     .contact-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -489,7 +542,6 @@
 
     .contact-link:hover { color: var(--blue-dark); }
 
-    /* Form */
     .form-group {
       display: flex;
       flex-direction: column;
@@ -503,7 +555,7 @@
       color: var(--text-heading);
     }
 
-    input, textarea, select {
+    input, textarea {
       font-family: 'Jost', sans-serif;
       font-size: 0.95rem;
       color: var(--text-body);
@@ -514,7 +566,6 @@
       width: 100%;
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
-      -webkit-appearance: none;
     }
 
     input:focus, textarea:focus {
@@ -550,27 +601,26 @@
       min-height: 1.2em;
     }
 
-    /* ── FOOTER ── */
     footer {
       background: var(--text-heading);
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.9);
       text-align: center;
       padding: 1.5rem 1rem;
       font-size: 0.82rem;
+      font-weight: 500;
     }
 
     footer a {
-      color: var(--blue-hover);
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
     }
 
-    /* ── UTILITY ── */
     .container { max-width: 1100px; margin: 0 auto; }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Dr. Özlem Akın</a>
   <ul class="nav-links">
@@ -581,7 +631,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-text">
     <p class="hero-sub">Dermatoloji Uzmanı · Yeditepe Üniversitesi</p>
@@ -615,7 +664,6 @@
   </div>
 </section>
 
-<!-- KARİYER -->
 <section id="kariyer">
   <div class="container">
     <p class="section-label">Akademik Kariyer</p>
@@ -655,7 +703,6 @@
   </div>
 </section>
 
-<!-- ÜYELİKLER -->
 <section id="uyelikler">
   <div class="container">
     <p class="section-label">Mesleki Üyelikler</p>
@@ -669,7 +716,6 @@
   </div>
 </section>
 
-<!-- UZMANLIK -->
 <section id="uzmanlik">
   <div class="container">
     <p class="section-label">Uzmanlık Alanları</p>
@@ -699,7 +745,6 @@
   </div>
 </section>
 
-<!-- YAYINLAR -->
 <section id="yayinlar">
   <div class="container">
     <p class="section-label">Bilimsel Katkılar</p>
@@ -714,68 +759,69 @@
   </div>
 </section>
 
-<!-- YORUMLAR -->
 <section id="yorumlar">
   <div class="container">
     <p class="section-label">Hasta Deneyimleri</p>
     <h2 class="section-title">Ne <em>Dediler?</em></h2>
+
+    <!-- PUAN ÖZETİ -->
+    <div class="reviews-summary">
+      <div class="reviews-score">
+        <div class="reviews-score-num">5.0</div>
+        <div class="reviews-score-stars">★★★★★</div>
+        <div class="reviews-score-label">2 değerlendirme</div>
+      </div>
+      <div class="reviews-breakdown">
+        <div class="breakdown-row">
+          <span class="breakdown-label">Zamanlama</span>
+          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
+          <span class="breakdown-val">5.0</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-label">İlgi</span>
+          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
+          <span class="breakdown-val">5.0</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-label">Ortam</span>
+          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
+          <span class="breakdown-val">5.0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- YORUM KARTLARI (sadece doktorsitesi'ndeki 2 gerçek yorum) -->
     <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"17 yaşındaki oğlumun yüzünde 5 yıldır artarak devam eden sivilce sorununu çözdü. Gerçekten çok memnun kaldık, teşekkürler."</p>
+        <div class="review-author">
+          <div class="review-avatar">EÜ</div>
+          <div>
+            <div class="review-name">E*** Ü***</div>
+            <div class="review-meta">Ağustos 2021 · doktorsitesi.com</div>
+          </div>
+        </div>
+      </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"Çok ilgili ve açıklayıcı bir hekimdi. Sorunumu dikkatle dinledi, tedavim çok iyi sonuç verdi. Kesinlikle tavsiye ederim."</p>
         <div class="review-author">
-          <div class="review-avatar">AK</div>
-          <div><div class="review-name">A.K.</div><div class="review-meta">Hasta · 2024</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Profesyonel yaklaşımı ve güler yüzüyle hastayı rahatlatıyor. Teşhisi çok hızlı koydu, tedavi süreci de çok verimli geçti."</p>
-        <div class="review-author">
-          <div class="review-avatar">MY</div>
-          <div><div class="review-name">M.Y.</div><div class="review-meta">Hasta · 2024</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Yıllarca çözüm bulamadığım cilt sorunum için ilk randevuda net bir yol haritası çizdi. Hem bilgili hem de sabırlı bir doktor."</p>
-        <div class="review-author">
-          <div class="review-avatar">SD</div>
-          <div><div class="review-name">S.D.</div><div class="review-meta">Hasta · 2023</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Muayene sırasında her şeyi adım adım açıkladı. İlaçların neden önerildiğini anlamak tedaviye olan güvenimi artırdı."</p>
-        <div class="review-author">
-          <div class="review-avatar">ET</div>
-          <div><div class="review-name">E.T.</div><div class="review-meta">Hasta · 2024</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Akademik bilgisini pratiğe mükemmel yansıtıyor. Hem doktorsitesi hem Google yorumlarında ismi hep öne çıkıyor, haklıymışlar."</p>
-        <div class="review-author">
-          <div class="review-avatar">BÇ</div>
-          <div><div class="review-name">B.Ç.</div><div class="review-meta">Hasta · 2023</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Randevu zamanlaması çok düzenliydi, bekleme olmadı. Muayenede acele ettirici bir his hiç yoktu. Tekrar geleceğim."</p>
-        <div class="review-author">
-          <div class="review-avatar">NA</div>
-          <div><div class="review-name">N.A.</div><div class="review-meta">Hasta · 2024</div></div>
+          <div class="review-avatar">HY</div>
+          <div>
+            <div class="review-name">H*** Y***</div>
+            <div class="review-meta">doktorsitesi.com</div>
+          </div>
         </div>
       </div>
     </div>
+
     <a class="reviews-link" href="https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul" target="_blank" rel="noopener">
       Tüm yorumları doktorsitesi.com'da görün →
     </a>
   </div>
 </section>
 
-<!-- İLETİŞİM -->
 <section id="iletisim">
   <div class="container">
     <p class="section-label">İletişim</p>
@@ -813,7 +859,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Dr. Özlem Akın · Tüm hakları saklıdır. ·
   <a href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">Yeditepe Üniversitesi Hastaneleri</a>
