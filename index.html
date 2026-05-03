@@ -4,322 +4,284 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Özlem Akın — Dermatoloji Uzmanı</title>
-<meta name="description" content="Dr. Özlem Akın — Yeditepe Üniversitesi Dermatoloji Anabilim Dalı Öğretim Üyesi. 20 yılı aşkın deneyim.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Dr. Özlem Akın — Yeditepe Üniversitesi Dermatoloji Anabilim Dalı Öğretim Üyesi.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --green-dark:#2D4A3E;
-  --green-mid:#3D6B5A;
-  --green-accent:#4E8A72;
-  --green-light:#A8C5BA;
-  --green-pale:#D6E8E2;
-  --cream:#F5F0E8;
-  --cream-dark:#EDE5D5;
-  --warm-brown:#6B5B4E;
-  --text-dark:#1E2D28;
-  --text-muted:#7A8C86;
-  --gold:#B8976A;
+  --green-dark:#1E3A2F;
+  --green-mid:#2D5444;
+  --green-accent:#3D7A5E;
+  --green-light:#7FB09A;
+  --green-pale:#C8DDD5;
+  --cream:#F2EDE3;
+  --cream-dark:#E8E0D0;
+  --warm-brown:#5C4A3A;
+  --text-dark:#12201A;
+  --text-muted:#6A7D76;
+  --gold:#C49A52;
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text-dark);font-weight:300;line-height:1.6;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text-dark);font-weight:300;}
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;justify-content:space-between;align-items:center;
-  padding:1.2rem 4rem;
-  background:rgba(245,240,232,0.95);
-  backdrop-filter:blur(10px);
+  padding:1.3rem 5rem;
+  background:rgba(242,237,227,0.96);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--green-pale);
 }
 .nav-logo{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.05rem;font-weight:400;letter-spacing:0.06em;
+  font-size:1.15rem;font-weight:400;letter-spacing:0.06em;
   color:var(--green-dark);text-decoration:none;
 }
-.nav-links{display:flex;gap:2.5rem;}
+.nav-links{display:flex;gap:3rem;}
 .nav-links a{
-  font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;
+  font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
   color:var(--text-muted);text-decoration:none;transition:color 0.25s;
 }
 .nav-links a:hover{color:var(--green-dark);}
 
 /* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:72px;}
+.hero{min-height:100vh;display:grid;grid-template-columns:52% 48%;padding-top:72px;}
+
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
-  padding:5rem 4rem 5rem 6rem;
-  background:var(--cream);
+  padding:6rem 4rem 6rem 5rem;
 }
 .hero-tag{
-  font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--green-accent);font-weight:500;margin-bottom:2rem;
-  display:flex;align-items:center;gap:12px;
+  font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--green-accent);font-weight:600;margin-bottom:2.5rem;
+  display:flex;align-items:center;gap:14px;
 }
-.hero-tag::before{content:'';width:32px;height:1px;background:var(--green-accent);}
+.hero-tag::before{content:'';width:36px;height:1.5px;background:var(--green-accent);}
 .hero-name{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3.2rem,5.5vw,5rem);font-weight:300;
-  line-height:1.05;color:var(--green-dark);margin-bottom:0.8rem;
+  font-size:clamp(4rem,6.5vw,6rem);font-weight:300;
+  line-height:1.0;color:var(--green-dark);margin-bottom:1rem;
 }
 .hero-name em{font-style:italic;color:var(--green-accent);}
 .hero-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.15rem;font-weight:300;font-style:italic;
-  color:var(--warm-brown);margin-bottom:2.5rem;
-  letter-spacing:0.02em;
+  font-size:1.4rem;font-weight:300;font-style:italic;
+  color:var(--warm-brown);margin-bottom:2.5rem;letter-spacing:0.02em;
 }
-.hero-divider{width:48px;height:2px;background:var(--gold);margin-bottom:2.5rem;}
+.hero-divider{width:56px;height:2.5px;background:var(--gold);margin-bottom:2.5rem;}
 .hero-desc{
-  font-size:0.95rem;line-height:1.9;color:var(--warm-brown);
-  max-width:420px;margin-bottom:3.5rem;font-weight:300;
+  font-size:1.05rem;line-height:1.9;color:var(--warm-brown);
+  max-width:440px;margin-bottom:3.5rem;font-weight:300;
 }
 .hero-cta{
-  display:inline-flex;align-items:center;gap:12px;
-  font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;
-  color:var(--green-dark);text-decoration:none;font-weight:500;
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--green-dark);text-decoration:none;font-weight:600;
   transition:gap 0.3s;
 }
-.hero-cta::after{
-  content:'';width:32px;height:1px;background:var(--green-dark);
-  transition:width 0.3s;
-}
-.hero-cta:hover{gap:18px;}
-.hero-cta:hover::after{width:48px;}
+.hero-cta::after{content:'';width:36px;height:1.5px;background:var(--green-dark);transition:width 0.3s;}
+.hero-cta:hover{gap:20px;}
+.hero-cta:hover::after{width:52px;}
 
 /* HERO RIGHT */
 .hero-right{
   background:var(--green-dark);
   position:relative;overflow:hidden;
-  display:flex;align-items:flex-end;justify-content:center;
+  display:flex;align-items:flex-end;
 }
-.hero-right::before{
-  content:'';position:absolute;
-  top:-10%;right:-15%;
-  width:65%;height:65%;
+.hero-bg-circle{
+  position:absolute;top:-8%;right:-12%;
+  width:70%;padding-bottom:70%;
   border-radius:50%;
-  background:var(--green-mid);opacity:0.5;
+  background:var(--green-mid);opacity:0.6;
 }
-.hero-right::after{
-  content:'';position:absolute;
-  bottom:15%;left:-10%;
-  width:45%;height:45%;
+.hero-bg-circle2{
+  position:absolute;top:30%;left:-15%;
+  width:40%;padding-bottom:40%;
   border-radius:50%;
   background:var(--green-accent);opacity:0.2;
 }
 .hero-photo-wrap{
   position:relative;z-index:2;
-  width:100%;height:100%;
+  width:100%;height:100%;min-height:calc(100vh - 72px);
   display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom:100px;
 }
 .hero-photo-wrap img{
-  width:85%;max-width:360px;
-  height:auto;object-fit:cover;object-position:top;
+  width:80%;max-width:380px;
+  height:auto;
+  object-fit:cover;object-position:top center;
   display:block;
-  filter:brightness(1.05) contrast(1.02);
+  filter:brightness(1.05) contrast(1.03) saturate(0.95);
 }
 .hero-stats{
   position:absolute;bottom:0;left:0;right:0;
-  display:flex;
-  background:rgba(30,45,40,0.92);
-  backdrop-filter:blur(8px);
-  z-index:3;
+  display:flex;z-index:3;
+  background:rgba(18,32,26,0.95);
 }
-.stat{
-  flex:1;text-align:center;
-  padding:1.5rem 1rem;
-  border-right:1px solid rgba(168,197,186,0.15);
-}
+.stat{flex:1;text-align:center;padding:1.6rem 1rem;border-right:1px solid rgba(200,221,213,0.12);}
 .stat:last-child{border-right:none;}
 .stat-num{
   font-family:'Cormorant Garamond',serif;
-  font-size:2.2rem;font-weight:300;color:#fff;
-  display:block;line-height:1;margin-bottom:6px;
+  font-size:2.6rem;font-weight:300;color:#fff;
+  display:block;line-height:1;margin-bottom:8px;
 }
-.stat-label{
-  font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--green-light);
-}
+.stat-label{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--green-light);}
 
 /* SECTIONS */
-section{padding:7rem 6rem;}
+section{padding:8rem 5rem;}
 .section-tag{
-  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
-  color:var(--green-accent);font-weight:500;margin-bottom:1rem;
-  display:flex;align-items:center;gap:12px;
+  font-size:0.68rem;letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--green-accent);font-weight:600;margin-bottom:1.2rem;
+  display:flex;align-items:center;gap:14px;
 }
-.section-tag::before{content:'';width:24px;height:1px;background:var(--green-accent);}
+.section-tag::before{content:'';width:28px;height:1.5px;background:var(--green-accent);}
 .section-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;
-  color:var(--green-dark);margin-bottom:3.5rem;line-height:1.15;
+  font-size:clamp(2.6rem,4vw,3.8rem);font-weight:300;
+  color:var(--green-dark);margin-bottom:4rem;line-height:1.1;
 }
 .section-title em{font-style:italic;color:var(--green-accent);}
 
 /* CAREER */
 .career-section{background:#fff;}
-.career-inner{max-width:820px;}
+.career-inner{max-width:860px;}
 .timeline{display:flex;flex-direction:column;}
 .timeline-item{
-  display:grid;grid-template-columns:200px 1fr;
-  gap:2.5rem;padding:2.2rem 0;
+  display:grid;grid-template-columns:210px 1fr;
+  gap:3rem;padding:2.5rem 0;
   border-bottom:1px solid var(--green-pale);
-  transition:background 0.2s;
 }
 .timeline-item:first-child{border-top:1px solid var(--green-pale);}
 .timeline-year{
-  font-size:0.8rem;color:var(--text-muted);
-  padding-top:5px;line-height:1.7;
-  letter-spacing:0.04em;font-weight:400;
+  font-size:0.88rem;color:var(--text-muted);
+  padding-top:6px;line-height:1.8;letter-spacing:0.04em;font-weight:400;
 }
 .timeline-badge{
   display:inline-block;
-  font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;
+  font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;
   background:var(--green-pale);color:var(--green-dark);
-  padding:3px 10px;border-radius:2px;margin-bottom:8px;font-weight:500;
+  padding:4px 12px;margin-bottom:10px;font-weight:600;
 }
 .timeline-inst{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.35rem;font-weight:400;color:var(--green-dark);
-  margin-bottom:5px;
+  font-size:1.5rem;font-weight:400;color:var(--green-dark);margin-bottom:6px;
 }
-.timeline-dept{font-size:0.84rem;color:var(--warm-brown);line-height:1.6;}
+.timeline-dept{font-size:0.9rem;color:var(--warm-brown);line-height:1.7;}
 
-/* MEMBERSHIPS + EXPERTISE */
-.memberships-section{
-  background:var(--cream-dark);
-  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
-}
-.memberships-list{list-style:none;display:flex;flex-direction:column;gap:1.2rem;margin-top:0.5rem;}
+/* MEMBERSHIPS */
+.memberships-section{background:var(--cream-dark);display:grid;grid-template-columns:1fr 1fr;gap:7rem;}
+.memberships-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:0.5rem;}
 .memberships-list li{
-  display:flex;align-items:flex-start;gap:1rem;
-  font-size:0.92rem;color:var(--text-dark);line-height:1.6;
-  padding-bottom:1.2rem;
-  border-bottom:1px solid rgba(78,138,114,0.15);
+  display:flex;align-items:flex-start;gap:1.2rem;
+  font-size:0.98rem;color:var(--text-dark);line-height:1.7;
+  padding:1.2rem 0;border-bottom:1px solid rgba(61,122,94,0.15);
 }
 .memberships-list li:last-child{border-bottom:none;}
 .memberships-list li::before{
-  content:'';flex-shrink:0;margin-top:11px;
-  width:6px;height:6px;border-radius:50%;
-  background:var(--green-accent);
+  content:'';flex-shrink:0;margin-top:10px;
+  width:7px;height:7px;border-radius:50%;background:var(--green-accent);
 }
 .expertise-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:0.5rem;}
 .exp-card{
-  background:#fff;
-  border:1px solid var(--green-pale);
-  border-left:3px solid var(--green-accent);
-  padding:1.8rem 1.5rem;
-  transition:border-color 0.2s,transform 0.2s;
+  background:#fff;border:1px solid var(--green-pale);
+  border-left:4px solid var(--green-accent);padding:2rem 1.6rem;
+  transition:border-left-color 0.2s,transform 0.2s;
 }
-.exp-card:hover{border-left-color:var(--green-dark);transform:translateY(-2px);}
+.exp-card:hover{border-left-color:var(--green-dark);transform:translateY(-3px);}
 .exp-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.15rem;font-weight:400;color:var(--green-dark);
-  margin-bottom:8px;
+  font-size:1.25rem;font-weight:400;color:var(--green-dark);margin-bottom:8px;
 }
-.exp-desc{font-size:0.8rem;color:var(--text-muted);line-height:1.7;}
+.exp-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.75;}
 
 /* PUBLICATIONS */
-.publications-section{background:var(--green-dark);}
+.publications-section{background:var(--green-dark);padding:8rem 5rem;}
 .publications-section .section-tag{color:var(--green-light);}
 .publications-section .section-title{color:#fff;}
 .pub-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:rgba(168,197,186,0.15);
-  border:1px solid rgba(168,197,186,0.15);
+  gap:1px;background:rgba(200,221,213,0.12);border:1px solid rgba(200,221,213,0.12);
 }
 .pub-card{
-  background:rgba(45,74,62,0.8);
-  padding:2.8rem 2.2rem;
-  display:flex;flex-direction:column;gap:0.6rem;
-  transition:background 0.2s;
+  background:rgba(30,58,47,0.9);padding:3rem 2.5rem;
+  display:flex;flex-direction:column;gap:0.7rem;transition:background 0.25s;
 }
-.pub-card:hover{background:rgba(61,107,90,0.8);}
+.pub-card:hover{background:rgba(45,84,68,0.95);}
 .pub-num{
   font-family:'Cormorant Garamond',serif;
-  font-size:3.5rem;font-weight:300;color:var(--gold);
-  line-height:1;
+  font-size:4rem;font-weight:300;color:var(--gold);line-height:1;
 }
-.pub-type{font-size:0.78rem;color:var(--green-light);line-height:1.6;letter-spacing:0.04em;}
+.pub-type{font-size:0.85rem;color:var(--green-light);line-height:1.7;letter-spacing:0.03em;}
 
 /* CONTACT */
-.contact-section{
-  background:var(--cream);
-  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
-}
-.contact-intro{font-size:0.92rem;line-height:1.9;color:var(--warm-brown);margin-bottom:2.5rem;}
+.contact-section{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;}
+.contact-intro{font-size:1rem;line-height:1.9;color:var(--warm-brown);margin-bottom:2.8rem;}
 .contact-link{
   display:inline-flex;align-items:center;gap:10px;
-  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--green-dark);text-decoration:none;font-weight:500;
-  border-bottom:1px solid var(--green-accent);padding-bottom:4px;
+  font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--green-dark);text-decoration:none;font-weight:600;
+  border-bottom:1.5px solid var(--green-accent);padding-bottom:5px;
 }
-.contact-form{display:flex;flex-direction:column;gap:1.2rem;}
-.form-group{display:flex;flex-direction:column;gap:6px;}
+.contact-form{display:flex;flex-direction:column;gap:1.5rem;}
+.form-group{display:flex;flex-direction:column;gap:8px;}
 .form-label{
-  font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;
-  color:var(--text-muted);font-weight:500;
+  font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--text-muted);font-weight:600;
 }
 .form-input{
-  background:transparent;
-  border:none;border-bottom:1.5px solid var(--green-pale);
-  color:var(--text-dark);padding:0.7rem 0;
-  font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;
+  background:transparent;border:none;
+  border-bottom:1.5px solid var(--green-pale);
+  color:var(--text-dark);padding:0.8rem 0;
+  font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:300;
   outline:none;transition:border-color 0.25s;
 }
 .form-input:focus{border-bottom-color:var(--green-accent);}
 .form-input::placeholder{color:var(--green-light);}
 .form-textarea{
-  background:transparent;
-  border:none;border-bottom:1.5px solid var(--green-pale);
-  color:var(--text-dark);padding:0.7rem 0;
-  font-family:'Jost',sans-serif;font-size:0.9rem;font-weight:300;
-  outline:none;transition:border-color 0.25s;
-  resize:none;min-height:110px;
+  background:transparent;border:none;
+  border-bottom:1.5px solid var(--green-pale);
+  color:var(--text-dark);padding:0.8rem 0;
+  font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:300;
+  outline:none;transition:border-color 0.25s;resize:none;min-height:120px;
 }
 .form-textarea:focus{border-bottom-color:var(--green-accent);}
 .form-textarea::placeholder{color:var(--green-light);}
 .form-btn{
   align-self:flex-start;
-  background:var(--green-dark);color:#fff;
-  border:none;padding:1rem 3rem;
-  font-family:'Jost',sans-serif;font-size:0.72rem;
-  letter-spacing:0.16em;text-transform:uppercase;font-weight:500;
-  cursor:pointer;margin-top:0.5rem;
-  transition:background 0.25s;
+  background:var(--green-dark);color:#fff;border:none;
+  padding:1.1rem 3.5rem;
+  font-family:'Jost',sans-serif;font-size:0.75rem;
+  letter-spacing:0.18em;text-transform:uppercase;font-weight:600;
+  cursor:pointer;margin-top:0.5rem;transition:background 0.25s;
 }
 .form-btn:hover{background:var(--green-mid);}
 
-/* FOOTER */
 footer{
-  background:var(--text-dark);
-  padding:2rem 6rem;
+  background:var(--text-dark);padding:2.2rem 5rem;
   display:flex;justify-content:space-between;align-items:center;
 }
-.footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);letter-spacing:0.06em;}
-.footer-right a{font-size:0.72rem;color:var(--green-light);text-decoration:none;letter-spacing:0.06em;}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.22);letter-spacing:0.06em;}
+.footer-right a{font-size:0.75rem;color:var(--green-light);text-decoration:none;letter-spacing:0.06em;}
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 .hero-left>*{animation:fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) both;}
 .hero-left>*:nth-child(1){animation-delay:0.1s;}
 .hero-left>*:nth-child(2){animation-delay:0.2s;}
 .hero-left>*:nth-child(3){animation-delay:0.3s;}
 .hero-left>*:nth-child(4){animation-delay:0.35s;}
-.hero-left>*:nth-child(5){animation-delay:0.4s;}
-.hero-left>*:nth-child(6){animation-delay:0.5s;}
+.hero-left>*:nth-child(5){animation-delay:0.42s;}
+.hero-left>*:nth-child(6){animation-delay:0.52s;}
 
 @media(max-width:960px){
   nav{padding:1rem 1.5rem;}
   .nav-links{gap:1.5rem;}
   .hero{grid-template-columns:1fr;}
-  .hero-right{height:60vw;min-height:300px;}
+  .hero-right{height:70vw;}
+  .hero-photo-wrap{min-height:unset;padding-bottom:80px;}
   .hero-left{padding:3rem 1.5rem;}
-  section{padding:4rem 1.5rem;}
-  .career-section,
-  .memberships-section,
-  .contact-section{grid-template-columns:1fr;gap:2rem;}
+  section{padding:5rem 1.5rem;}
+  .memberships-section,.contact-section{grid-template-columns:1fr;gap:3rem;}
   .pub-grid{grid-template-columns:repeat(2,1fr);}
   .expertise-grid{grid-template-columns:1fr;}
   .timeline-item{grid-template-columns:1fr;gap:0.5rem;}
@@ -349,6 +311,8 @@ footer{
     <a href="#iletişim" class="hero-cta">Randevu için iletişime geçin</a>
   </div>
   <div class="hero-right">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle2"></div>
     <div class="hero-photo-wrap">
       <img src="ozlem-akin.jpg" alt="Dr. Özlem Akın">
     </div>
@@ -383,9 +347,9 @@ footer{
       <div class="timeline-item">
         <div class="timeline-year">2000 – 2005</div>
         <div>
-          <span class="timeline-badge">Uzmanlık</span>
+          <span class="timeline-badge">Uzmanlık · 2005</span>
           <p class="timeline-inst">Marmara Üniversitesi Tıp Fakültesi</p>
-          <p class="timeline-dept">Dermatoloji Anabilim Dalı · Uzmanlık Eğitimi (2005)</p>
+          <p class="timeline-dept">Dermatoloji Anabilim Dalı · Uzmanlık Eğitimi</p>
         </div>
       </div>
       <div class="timeline-item">
@@ -443,8 +407,8 @@ footer{
     <div class="pub-card"><span class="pub-num">3</span><span class="pub-type">Uluslararası Bildiri</span></div>
     <div class="pub-card"><span class="pub-num">32</span><span class="pub-type">Ulusal Bildiri</span></div>
     <div class="pub-card"><span class="pub-num">12</span><span class="pub-type">Dergi Makalesi</span></div>
-    <div class="pub-card" style="background:rgba(184,151,106,0.15);">
-      <span class="pub-num" style="color:var(--gold);font-size:2rem;margin-top:0.5rem;">İNG</span>
+    <div class="pub-card" style="background:rgba(196,154,82,0.1);">
+      <span class="pub-num" style="color:var(--gold);font-size:2.5rem;letter-spacing:0.08em;">İNG</span>
       <span class="pub-type">Yabancı Dil — İngilizce</span>
     </div>
   </div>
