@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'iletisim@drozlemakin.com.tr',
+        from: 'Dr. Özlem Akın <onboarding@resend.dev>',
         to: 'ozlem.akin@yeditepe.edu.tr',
         reply_to: email,
         subject: `Web Sitesi İletişim: ${subject || 'Yeni Mesaj'}`,
