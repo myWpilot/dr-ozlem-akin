@@ -565,7 +565,50 @@ footer{
       <label class="form-label">Mesaj</label>
       <textarea class="form-textarea" placeholder="Mesajınızı buraya yazın..."></textarea>
     </div>
-    <button class="form-btn" onclick="this.textContent='Gönderildi ✓';this.style.background='#1A5FB8';">Gönder</button>
+    <button class="form-btn" id="submit-btn" onclick="submitForm(event)">Gönder</button>
+  </div>
+</section>
+<script>
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const name = document.querySelector('input[type="text"]').value;
+  const email = document.querySelector('input[type="email"]').value;
+  const inputs = document.querySelectorAll('.form-input');
+  const subject = inputs[2].value;
+  const message = document.querySelector('.form-textarea').value;
+
+  if (!name || !email || !message) {
+    btn.textContent = 'Lütfen gerekli alanları doldurun';
+    btn.style.background = '#EF4444';
+    setTimeout(() => { btn.textContent = 'Gönder'; btn.style.background = ''; }, 3000);
+    return;
+  }
+
+  btn.textContent = 'Gönderiliyor...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, subject, message })
+    });
+
+    if (res.ok) {
+      btn.textContent = 'Gönderildi ✓';
+      btn.style.background = '#059669';
+      document.querySelectorAll('.form-input, .form-textarea').forEach(el => el.value = '');
+    } else {
+      throw new Error();
+    }
+  } catch {
+    btn.textContent = 'Hata oluştu, tekrar deneyin';
+    btn.style.background = '#EF4444';
+    btn.disabled = false;
+    setTimeout(() => { btn.textContent = 'Gönder'; btn.style.background = ''; }, 4000);
+  }
+}
   </div>
 </section>
 
