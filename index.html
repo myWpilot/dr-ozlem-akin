@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Özlem Akın — Dermatoloji Uzmanı</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --sage:#8FA68E;
+  --sage-light:#C8D9C7;
+  --sage-pale:#EEF4EE;
+  --blush:#D4A89A;
+  --blush-light:#F0DDD8;
+  --cream:#FAF8F4;
+  --warm-gray:#8A8480;
+  --dark:#2C2826;
+  --text-muted:#A09690;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);font-weight:300;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.2rem 3rem;
+  background:rgba(250,248,244,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:0.5px solid var(--sage-light);
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;letter-spacing:0.08em;color:var(--dark);text-decoration:none;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links a{font-size:0.78rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--sage);}
+
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px;}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 5rem 5rem;}
+.hero-tag{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blush);font-weight:500;margin-bottom:1.5rem;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--dark);margin-bottom:0.5rem;}
+.hero-name em{font-style:italic;color:var(--sage);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;font-style:italic;color:var(--warm-gray);margin-bottom:2.5rem;}
+.hero-desc{font-size:0.9rem;line-height:1.8;color:var(--warm-gray);max-width:400px;margin-bottom:3rem;}
+.hero-cta{display:inline-block;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--dark);text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:4px;transition:color 0.2s,border-color 0.2s;}
+.hero-cta:hover{color:var(--sage);}
+
+.hero-right{background:var(--sage-pale);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.hero-right::before{content:'';position:absolute;top:-30%;right:-20%;width:70%;height:80%;border-radius:50%;background:var(--sage-light);opacity:0.4;}
+.hero-right::after{content:'';position:absolute;bottom:-20%;left:-10%;width:50%;height:60%;border-radius:50%;background:var(--blush-light);opacity:0.3;}
+
+.hero-photo-wrap{
+  position:relative;z-index:1;
+  width:340px;height:420px;
+  overflow:hidden;
+  border-radius:180px 180px 120px 120px;
+  border:1px solid rgba(143,166,142,0.25);
+  box-shadow:0 30px 80px rgba(44,40,38,0.12);
+}
+.hero-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+
+.hero-stats{
+  position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);
+  display:flex;gap:2.5rem;z-index:1;
+  background:rgba(250,248,244,0.85);
+  backdrop-filter:blur(8px);
+  padding:1rem 2rem;
+  border-radius:2px;
+  border:0.5px solid var(--sage-light);
+}
+.stat{text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--dark);display:block;}
+.stat-label{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
+
+section{padding:6rem 5rem;}
+.section-tag{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blush);font-weight:500;margin-bottom:1rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;color:var(--dark);margin-bottom:3rem;line-height:1.2;}
+
+.career-section{background:#fff;}
+.timeline{display:flex;flex-direction:column;gap:0;}
+.timeline-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2rem 0;border-bottom:0.5px solid var(--sage-light);}
+.timeline-item:first-child{border-top:0.5px solid var(--sage-light);}
+.timeline-year{font-size:0.78rem;color:var(--text-muted);padding-top:4px;line-height:1.6;letter-spacing:0.05em;}
+.timeline-inst{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--dark);margin-bottom:4px;}
+.timeline-dept{font-size:0.82rem;color:var(--warm-gray);line-height:1.5;}
+
+.memberships-section{background:var(--sage-pale);display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
+.memberships-list{list-style:none;display:flex;flex-direction:column;gap:1rem;}
+.memberships-list li{display:flex;align-items:center;gap:1rem;font-size:0.9rem;color:var(--dark);line-height:1.5;}
+.memberships-list li::before{content:'';flex-shrink:0;width:20px;height:1px;background:var(--sage);}
+
+.publications-section{background:#fff;}
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sage-light);border:0.5px solid var(--sage-light);}
+.pub-card{background:#fff;padding:2.5rem 2rem;display:flex;flex-direction:column;gap:0.5rem;}
+.pub-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--sage);line-height:1;}
+.pub-type{font-size:0.78rem;color:var(--warm-gray);line-height:1.5;}
+
+.expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.exp-card{background:rgba(255,255,255,0.7);border:0.5px solid rgba(212,168,154,0.4);border-radius:2px;padding:2rem;}
+.exp-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--dark);margin-bottom:0.5rem;}
+.exp-desc{font-size:0.82rem;color:var(--warm-gray);line-height:1.7;}
+
+.contact-section{background:var(--dark);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.contact-section .section-tag{color:var(--sage-light);}
+.contact-section .section-title{color:#fff;}
+.contact-intro{font-size:0.9rem;line-height:1.8;color:rgba(255,255,255,0.5);}
+.contact-form{display:flex;flex-direction:column;gap:1rem;}
+.form-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-bottom:6px;}
+.form-input{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.15);color:#fff;padding:0.9rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:300;outline:none;transition:border-color 0.2s;border-radius:0;}
+.form-input:focus{border-color:var(--sage);}
+.form-input::placeholder{color:rgba(255,255,255,0.2);}
+.form-textarea{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.15);color:#fff;padding:0.9rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:300;outline:none;transition:border-color 0.2s;resize:vertical;min-height:120px;border-radius:0;}
+.form-textarea:focus{border-color:var(--sage);}
+.form-textarea::placeholder{color:rgba(255,255,255,0.2);}
+.form-btn{background:var(--sage);color:#fff;border:none;padding:1rem 2.5rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;align-self:flex-start;transition:background 0.2s;}
+.form-btn:hover{background:var(--sage-light);color:var(--dark);}
+
+footer{background:var(--dark);border-top:0.5px solid rgba(255,255,255,0.08);padding:2rem 5rem;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.2);letter-spacing:0.05em;}
+.footer-right a{font-size:0.75rem;color:var(--sage-light);text-decoration:none;letter-spacing:0.05em;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero-left>*{animation:fadeUp 0.8s ease both;}
+.hero-left>*:nth-child(1){animation-delay:0.1s;}
+.hero-left>*:nth-child(2){animation-delay:0.2s;}
+.hero-left>*:nth-child(3){animation-delay:0.3s;}
+.hero-left>*:nth-child(4){animation-delay:0.4s;}
+.hero-left>*:nth-child(5){animation-delay:0.5s;}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:3rem 1.5rem;}
+  section{padding:4rem 1.5rem;}
+  .timeline-item{grid-template-columns:1fr;gap:0.5rem;}
+  .memberships-section{grid-template-columns:1fr;gap:2rem;}
+  .pub-grid{grid-template-columns:repeat(2,1fr);}
+  .expertise-grid{grid-template-columns:1fr;}
+  .contact-section{grid-template-columns:1fr;gap:2rem;}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Dr. Özlem Akın</a>
+  <div class="nav-links">
+    <a href="#kariyer">Kariyer</a>
+    <a href="#uzmanlık">Uzmanlık</a>
+    <a href="#yayınlar">Yayınlar</a>
+    <a href="#iletişim">İletişim</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Dermatoloji Uzmanı · Yeditepe Üniversitesi</span>
+    <h1 class="hero-name">Dr. <em>Özlem</em><br>Akın</h1>
+    <p class="hero-title">Dr. Öğretim Üyesi</p>
+    <p class="hero-desc">20 yılı aşkın klinik ve akademik deneyimiyle dermatoloji alanında hasta odaklı, kanıta dayalı yaklaşımlar sunan uzman bir hekim.</p>
+    <a href="#iletişim" class="hero-cta">Randevu için iletişime geçin</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="images/ozlem-akin.jpg" alt="Dr. Özlem Akın">
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Yıl Deneyim</span></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">Yabancı Yayın</span></div>
+      <div class="stat"><span class="stat-num">35</span><span class="stat-label">Bildiri</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="career-section" id="kariyer">
+  <div style="max-width:800px;">
+    <p class="section-tag">Akademik Kariyer</p>
+    <h2 class="section-title">Deneyim &<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sage);">Eğitim</em></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2008 – Günümüz</div>
+        <div class="timeline-content">
+          <p class="timeline-inst">Yeditepe Üniversitesi Tıp Fakültesi</p>
+          <p class="timeline-dept">Dermatoloji Anabilim Dalı · Dr. Öğretim Üyesi</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2005 – 2008</div>
+        <div class="timeline-content">
+          <p class="timeline-inst">Maltepe Üniversitesi Tıp Fakültesi</p>
+          <p class="timeline-dept">Dermatoloji Anabilim Dalı</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2000 – 2005</div>
+        <div class="timeline-content">
+          <p class="timeline-inst">Marmara Üniversitesi Tıp Fakültesi</p>
+          <p class="timeline-dept">Dermatoloji Anabilim Dalı · Uzmanlık Eğitimi</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1999 – 2000</div>
+        <div class="timeline-content">
+          <p class="timeline-inst">Kocaeli Üniversitesi Tıp Fakültesi</p>
+          <p class="timeline-dept">Çocuk Cerrahisi Anabilim Dalı</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="memberships-section" id="uzmanlık">
+  <div>
+    <p class="section-tag">Mesleki Üyelikler</p>
+    <h2 class="section-title">Dernek &<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sage);">Kuruluşlar</em></h2>
+    <ul class="memberships-list">
+      <li>Türk Tabipler Birliği</li>
+      <li>Deri ve Zührevi Hastalıklar Derneği</li>
+      <li>Türk Dermatoloji Derneği</li>
+      <li>European Academy of Dermatology and Venereology</li>
+    </ul>
+  </div>
+  <div>
+    <p class="section-tag">Uzmanlık Alanları</p>
+    <div class="expertise-grid" style="margin-top:1rem;">
+      <div class="exp-card">
+        <div class="exp-title">Genel Dermatoloji</div>
+        <p class="exp-desc">Cilt, saç ve tırnak hastalıklarının tanı ve tedavisi</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-title">Dermoskopi</div>
+        <p class="exp-desc">Deri lezyonlarının ileri görüntüleme yöntemleriyle değerlendirilmesi</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-title">Kozmetik Dermatoloji</div>
+        <p class="exp-desc">Estetik cilt tedavileri ve gençleştirici uygulamalar</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-title">Akademik Araştırma</div>
+        <p class="exp-desc">Uluslararası yayın ve bilimsel bildirilerle alana katkı</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="publications-section" id="yayınlar">
+  <p class="section-tag">Bilimsel Katkılar</p>
+  <h2 class="section-title">Yayın &<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sage);">Araştırmalar</em></h2>
+  <div class="pub-grid">
+    <div class="pub-card"><span class="pub-num">10</span><span class="pub-type">Yabancı Dilde Yayın</span></div>
+    <div class="pub-card"><span class="pub-num">2</span><span class="pub-type">Türkçe Yayın</span></div>
+    <div class="pub-card"><span class="pub-num">3</span><span class="pub-type">Uluslararası Bildiri</span></div>
+    <div class="pub-card"><span class="pub-num">32</span><span class="pub-type">Ulusal Bildiri</span></div>
+    <div class="pub-card"><span class="pub-num">12</span><span class="pub-type">Dergi Makalesi</span></div>
+    <div class="pub-card" style="background:var(--sage-pale);"><span class="pub-num" style="color:var(--sage);">İng.</span><span class="pub-type">Yabancı Dil — İngilizce</span></div>
+  </div>
+</section>
+
+<section class="contact-section" id="iletişim">
+  <div>
+    <p class="section-tag">İletişim</p>
+    <h2 class="section-title">Bana<br>Yazın</h2>
+    <p class="contact-intro">Sorularınız, randevu talepleriniz veya akademik işbirlikleri için benimle iletişime geçebilirsiniz.<br><br>Yeditepe Üniversitesi Hastaneleri bünyesinde hizmet vermekteyim.</p>
+    <div style="margin-top:2rem;">
+      <a href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage-light);text-decoration:none;border-bottom:1px solid var(--sage);padding-bottom:4px;">
+        Yeditepe Hastaneleri Profili →
+      </a>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div>
+      <label class="form-label">Ad Soyad</label>
+      <input class="form-input" type="text" placeholder="Adınız ve soyadınız">
+    </div>
+    <div>
+      <label class="form-label">E-posta</label>
+      <input class="form-input" type="email" placeholder="ornek@email.com">
+    </div>
+    <div>
+      <label class="form-label">Konu</label>
+      <input class="form-input" type="text" placeholder="Mesajınızın konusu">
+    </div>
+    <div>
+      <label class="form-label">Mesaj</label>
+      <textarea class="form-textarea" placeholder="Mesajınızı buraya yazın..."></textarea>
+    </div>
+    <button class="form-btn" onclick="this.textContent='Gönderildi ✓';this.style.background='var(--sage-light)';this.style.color='var(--dark)';">Gönder</button>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 Dr. Özlem Akın · Tüm hakları saklıdır.</span>
+  <a href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" class="footer-right">Yeditepe Üniversitesi Hastaneleri</a>
+</footer>
+
+</body>
+</html>
