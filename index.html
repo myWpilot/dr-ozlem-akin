@@ -263,12 +263,17 @@
       <form id="review-form">
         <div class="review-form-group">
           <label>Puanınız <span style="font-weight:300;color:#6B7280;font-size:0.78rem;">(yıldıza tıklayın)</span></label>
-          <div class="star-input">
-            <input type="radio" name="yildiz" id="s5" value="5"><label for="s5">★</label>
-            <input type="radio" name="yildiz" id="s4" value="4"><label for="s4">★</label>
-            <input type="radio" name="yildiz" id="s3" value="3"><label for="s3">★</label>
-            <input type="radio" name="yildiz" id="s2" value="2"><label for="s2">★</label>
-            <input type="radio" name="yildiz" id="s1" value="1"><label for="s1">★</label>
+          <div style="display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px;margin-bottom:1rem;">
+            <input type="radio" name="yildiz" id="s5" value="5" style="display:none;">
+            <label for="s5" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(5)" onmouseout="resetStars()" onclick="selectStar(5)">★</label>
+            <input type="radio" name="yildiz" id="s4" value="4" style="display:none;">
+            <label for="s4" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(4)" onmouseout="resetStars()" onclick="selectStar(4)">★</label>
+            <input type="radio" name="yildiz" id="s3" value="3" style="display:none;">
+            <label for="s3" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(3)" onmouseout="resetStars()" onclick="selectStar(3)">★</label>
+            <input type="radio" name="yildiz" id="s2" value="2" style="display:none;">
+            <label for="s2" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(2)" onmouseout="resetStars()" onclick="selectStar(2)">★</label>
+            <input type="radio" name="yildiz" id="s1" value="1" style="display:none;">
+            <label for="s1" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(1)" onmouseout="resetStars()" onclick="selectStar(1)">★</label>
           </div>
         </div>
         <div class="review-form-group">
@@ -444,6 +449,26 @@ contactForm.addEventListener('submit', async function(e) {
   } catch { msg.style.color='#dc2626'; msg.textContent='Bir hata oluştu, lütfen tekrar deneyin.'; }
   finally { btn.disabled=false; btn.textContent='Gönder'; }
 });
+
+
+let selectedStar = 0;
+function highlightStars(n) {
+  for(let i=1;i<=5;i++){
+    const l = document.querySelector('label[for="s'+i+'"]');
+    if(l) l.style.color = i<=n ? '#F59E0B' : '#D1D5DB';
+  }
+}
+function resetStars() {
+  for(let i=1;i<=5;i++){
+    const l = document.querySelector('label[for="s'+i+'"]');
+    if(l) l.style.color = i<=selectedStar ? '#F59E0B' : '#D1D5DB';
+  }
+}
+function selectStar(n) {
+  selectedStar = n;
+  document.getElementById('s'+n).checked = true;
+  highlightStars(n);
+}
 
 loadReviews();
 </script>
