@@ -10,88 +10,44 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --blue:         #2F80ED;
-      --blue-dark:    #1A5FB8;
-      --blue-hover:   #56CCF2;
-      --nude:         #F2DCDC;
-      --bg-white:     #FFFFFF;
-      --bg-off:       #F8FAFC;
-      --text-heading: #1F2937;
-      --text-body:    #374151;
-      --radius:       12px;
+      --blue: #2F80ED; --blue-dark: #1A5FB8; --blue-hover: #56CCF2;
+      --nude: #F2DCDC; --bg-white: #FFFFFF; --bg-off: #F8FAFC;
+      --text-heading: #1F2937; --text-body: #374151; --radius: 12px;
     }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Jost', sans-serif;
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--text-body);
-      background: var(--bg-white);
-      overflow-x: hidden;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #E5EAF0;
-      padding: 0 clamp(1rem, 5vw, 3rem);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
+    body { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 400; color: var(--text-body); background: var(--bg-white); overflow-x: hidden; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E5EAF0; padding: 0 clamp(1rem,5vw,3rem); display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .nav-logo { font-size: 1rem; font-weight: 600; color: var(--blue); text-decoration: none; white-space: nowrap; }
-    .nav-links { display: flex; gap: clamp(0.75rem, 3vw, 2rem); list-style: none; }
+    .nav-links { display: flex; gap: clamp(0.75rem,3vw,2rem); list-style: none; }
     .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-body); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--blue); }
-    @media (max-width: 480px) { .nav-links { gap: 0.6rem; } .nav-links a { font-size: 0.78rem; } }
 
-    .hero {
-      min-height: calc(100svh - 60px);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 3rem;
-      padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 8vw, 6rem);
-      background: linear-gradient(135deg, var(--bg-off) 0%, #EEF4FD 60%, var(--nude) 100%);
-    }
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; min-height: auto; gap: 2rem; }
-      .hero-image-wrap { order: -1; }
-    }
+    .hero { min-height: calc(100svh - 60px); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding: clamp(3rem,8vw,6rem) clamp(1.5rem,8vw,6rem); background: linear-gradient(135deg, var(--bg-off) 0%, #EEF4FD 60%, var(--nude) 100%); }
+    @media (max-width: 768px) { .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; min-height: auto; gap: 2rem; } .hero-image-wrap { order: -1; } .hero-desc { margin-left: auto; margin-right: auto; } }
     .hero-sub { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 300; line-height: 1.15; color: var(--text-heading); margin-bottom: 0.5rem; }
+    .hero h1 { font-size: clamp(2rem,5vw,3.2rem); font-weight: 300; line-height: 1.15; color: var(--text-heading); margin-bottom: 0.5rem; }
     .hero h1 em { font-style: italic; color: var(--blue); }
     .hero-title { font-size: 1rem; font-weight: 500; color: var(--blue-dark); margin-bottom: 1.25rem; }
     .hero-desc { font-size: 1rem; line-height: 1.75; color: var(--text-body); max-width: 480px; margin-bottom: 2rem; }
-    @media (max-width: 768px) { .hero-desc { margin-left: auto; margin-right: auto; } }
-    .btn-primary {
-      display: inline-block; background: var(--blue); color: #fff;
-      padding: 0.85rem 2rem; border-radius: 50px; text-decoration: none;
-      font-weight: 500; font-size: 0.95rem; transition: background 0.25s, transform 0.2s;
-    }
+    .btn-primary { display: inline-block; background: var(--blue); color: #fff; padding: 0.85rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: background 0.25s, transform 0.2s; }
     .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
     .hero-image-wrap { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
-    .hero-img-frame {
-      width: clamp(200px, 45vw, 340px); aspect-ratio: 3/4;
-      border-radius: 160px 160px 120px 120px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(47,128,237,0.18); border: 4px solid var(--blue-hover);
-    }
+    .hero-img-frame { width: clamp(200px,45vw,340px); aspect-ratio: 3/4; border-radius: 160px 160px 120px 120px; overflow: hidden; box-shadow: 0 20px 60px rgba(47,128,237,0.18); border: 4px solid var(--blue-hover); }
     .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
     .stats { display: flex; gap: 1.5rem; justify-content: center; }
     .stat { text-align: center; background: white; border-radius: var(--radius); padding: 0.75rem 1.25rem; box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
     .stat-num { font-size: 1.6rem; font-weight: 600; color: var(--blue); line-height: 1; }
     .stat-label { font-size: 0.72rem; color: var(--text-body); margin-top: 0.2rem; }
 
-    section { padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 8vw, 6rem); }
+    section { padding: clamp(3rem,8vw,6rem) clamp(1.25rem,8vw,6rem); }
     section:nth-child(even) { background: var(--bg-off); }
     .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.5rem; }
-    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 300; color: var(--text-heading); margin-bottom: 2.5rem; }
+    .section-title { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 300; color: var(--text-heading); margin-bottom: 2.5rem; }
     .section-title em { font-style: italic; color: var(--blue); }
+    .container { max-width: 1100px; margin: 0 auto; }
 
-    .timeline { display: flex; flex-direction: column; gap: 0; max-width: 720px; }
+    .timeline { display: flex; flex-direction: column; max-width: 720px; }
     .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem 2rem; padding: 1.5rem 0; border-bottom: 1px solid #E5EAF0; }
     @media (max-width: 560px) { .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; } }
     .timeline-date { font-size: 0.8rem; color: var(--blue); font-weight: 500; padding-top: 0.15rem; white-space: nowrap; }
@@ -103,66 +59,83 @@
     .membership-item { display: flex; align-items: center; gap: 1rem; background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1rem 1.25rem; }
     .membership-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
 
-    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.25rem; }
     .expertise-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.75rem; transition: box-shadow 0.25s, transform 0.25s; }
     .expertise-card:hover { box-shadow: 0 8px 30px rgba(47,128,237,0.12); transform: translateY(-3px); }
     .expertise-icon { width: 44px; height: 44px; background: #EEF4FD; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
     .expertise-card h3 { font-size: 1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.4rem; }
     .expertise-card p { font-size: 0.88rem; line-height: 1.6; color: var(--text-body); }
 
-    .pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1rem; }
     .pub-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 1rem; text-align: center; }
     .pub-num { font-size: 2rem; font-weight: 300; color: var(--blue); line-height: 1; }
     .pub-label { font-size: 0.8rem; color: var(--text-body); margin-top: 0.3rem; }
 
-    .reviews-summary { display: flex; align-items: center; gap: 2rem; background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 2rem; margin-bottom: 2rem; max-width: 400px; }
-    .reviews-score { text-align: center; }
-    .reviews-score-num { font-size: 3.5rem; font-weight: 300; color: var(--blue); line-height: 1; }
-    .reviews-score-stars { color: #F59E0B; font-size: 1.1rem; letter-spacing: 2px; margin: 0.3rem 0; }
-    .reviews-score-label { font-size: 0.78rem; color: var(--text-body); }
-    .reviews-breakdown { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
-    .breakdown-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; color: var(--text-body); }
-    .breakdown-label { width: 70px; }
-    .breakdown-bar { flex: 1; height: 6px; background: #E5EAF0; border-radius: 3px; overflow: hidden; }
-    .breakdown-fill { height: 100%; background: var(--blue); border-radius: 3px; }
-    .breakdown-val { width: 24px; text-align: right; font-weight: 500; color: var(--blue); }
+    /* REVIEWS */
+    .reviews-top { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: start; margin-bottom: 2.5rem; }
+    @media (max-width: 600px) { .reviews-top { grid-template-columns: 1fr; gap: 1.5rem; } }
 
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+    .reviews-score-box { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 2rem; text-align: center; min-width: 160px; }
+    .score-big { font-size: 4rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .score-stars { color: #F59E0B; font-size: 1.3rem; letter-spacing: 3px; margin: 0.3rem 0; }
+    .score-count { font-size: 0.8rem; color: var(--text-body); }
+
+    .reviews-breakdown { display: flex; flex-direction: column; gap: 0.6rem; justify-content: center; }
+    .breakdown-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; }
+    .breakdown-label { width: 80px; color: var(--text-body); }
+    .breakdown-bar { flex: 1; height: 8px; background: #E5EAF0; border-radius: 4px; overflow: hidden; }
+    .breakdown-fill { height: 100%; background: var(--blue); border-radius: 4px; transition: width 0.8s ease; }
+    .breakdown-val { width: 30px; text-align: right; font-weight: 600; color: var(--blue); }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.25rem; margin-bottom: 2rem; }
     .review-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
-    .review-stars { color: #F59E0B; font-size: 0.9rem; }
-    .review-text { font-size: 0.9rem; line-height: 1.65; color: var(--text-body); flex: 1; }
-    .review-author { display: flex; align-items: center; gap: 0.75rem; }
+    .review-stars { color: #F59E0B; font-size: 1rem; }
+    .review-text { font-size: 0.92rem; line-height: 1.65; color: var(--text-body); flex: 1; }
+    .review-author { display: flex; align-items: center; gap: 0.75rem; padding-top: 0.5rem; border-top: 1px solid #F3F4F6; }
     .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-hover)); color: white; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .review-name { font-weight: 600; font-size: 0.88rem; color: var(--text-heading); }
     .review-meta { font-size: 0.75rem; color: #9CA3AF; }
-    .reviews-link { display: inline-block; color: var(--blue); font-size: 0.9rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--blue-hover); padding-bottom: 1px; transition: color 0.2s; }
+    .reviews-empty { color: var(--text-body); font-size: 0.95rem; opacity: 0.6; margin-bottom: 2rem; }
+
+    /* YORUM FORMU */
+    .review-form-wrap { background: #EEF4FD; border: 1px solid #D1E3FB; border-radius: var(--radius); padding: 2rem; margin-bottom: 1.5rem; }
+    .review-form-wrap h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 1.25rem; }
+    .star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.25rem; margin-bottom: 1rem; }
+    .star-input input { display: none; }
+    .star-input label { font-size: 2rem; color: #D1D5DB; cursor: pointer; transition: color 0.15s; }
+    .star-input input:checked ~ label,
+    .star-input label:hover,
+    .star-input label:hover ~ label { color: #F59E0B; }
+    .review-form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.85rem; }
+    .review-form-group label { font-size: 0.82rem; font-weight: 500; color: var(--text-heading); }
+    .review-form-group input,
+    .review-form-group textarea { font-family: 'Jost',sans-serif; font-size: 0.95rem; color: var(--text-body); background: white; border: 1.5px solid #D1D9E6; border-radius: 8px; padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .review-form-group input:focus,
+    .review-form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,128,237,0.12); }
+    .review-form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-review-submit { background: var(--blue); color: white; border: none; border-radius: 50px; padding: 0.8rem 2rem; font-family: 'Jost',sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: background 0.25s; }
+    .btn-review-submit:hover { background: var(--blue-dark); }
+    #review-msg { font-size: 0.85rem; margin-top: 0.75rem; min-height: 1.2em; }
+
+    .reviews-link { display: inline-block; color: var(--blue); font-size: 0.9rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--blue-hover); padding-bottom: 1px; }
     .reviews-link:hover { color: var(--blue-dark); }
 
+    /* CONTACT */
     .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     @media (max-width: 680px) { .contact-wrap { grid-template-columns: 1fr; gap: 2rem; } }
     .contact-info p { font-size: 0.95rem; line-height: 1.75; margin-bottom: 1.5rem; color: var(--text-body); }
-    .contact-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--blue); font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
-    .contact-link:hover { color: var(--blue-dark); }
+    .contact-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--blue); font-weight: 500; font-size: 0.9rem; text-decoration: none; }
     .form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
     label { font-size: 0.82rem; font-weight: 500; color: var(--text-heading); }
-    input, textarea {
-      font-family: 'Jost', sans-serif; font-size: 0.95rem; color: var(--text-body);
-      background: var(--bg-off); border: 1.5px solid #D1D9E6; border-radius: 8px;
-      padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
-    }
+    input, textarea { font-family: 'Jost',sans-serif; font-size: 0.95rem; color: var(--text-body); background: var(--bg-off); border: 1.5px solid #D1D9E6; border-radius: 8px; padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
     input:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,128,237,0.12); }
     textarea { resize: vertical; min-height: 120px; }
-    .btn-submit {
-      width: 100%; background: var(--blue); color: white; border: none;
-      border-radius: 50px; padding: 0.9rem; font-family: 'Jost', sans-serif;
-      font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.25s, transform 0.2s; margin-top: 0.5rem;
-    }
-    .btn-submit:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn-submit { width: 100%; background: var(--blue); color: white; border: none; border-radius: 50px; padding: 0.9rem; font-family: 'Jost',sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.25s; margin-top: 0.5rem; }
+    .btn-submit:hover { background: var(--blue-dark); }
     #form-msg { font-size: 0.85rem; margin-top: 0.75rem; min-height: 1.2em; }
 
     footer { background: var(--text-heading); color: rgba(255,255,255,0.9); text-align: center; padding: 1.5rem 1rem; font-size: 0.82rem; font-weight: 500; }
     footer a { color: #fff; text-decoration: none; font-weight: 600; }
-    .container { max-width: 1100px; margin: 0 auto; }
   </style>
 </head>
 <body>
@@ -204,33 +177,19 @@
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-date">2008 – Günümüz</div>
-        <div class="timeline-content">
-          <span class="badge">Mevcut Görev</span>
-          <h3>Yeditepe Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı · Dr. Öğretim Üyesi</p>
-        </div>
+        <div class="timeline-content"><span class="badge">Mevcut Görev</span><h3>Yeditepe Üniversitesi Tıp Fakültesi</h3><p>Dermatoloji Anabilim Dalı · Dr. Öğretim Üyesi</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2005 – 2008</div>
-        <div class="timeline-content">
-          <h3>Maltepe Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı</p>
-        </div>
+        <div class="timeline-content"><h3>Maltepe Üniversitesi Tıp Fakültesi</h3><p>Dermatoloji Anabilim Dalı</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">2000 – 2005</div>
-        <div class="timeline-content">
-          <span class="badge">Uzmanlık · 2005</span>
-          <h3>Marmara Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı · Uzmanlık Eğitimi</p>
-        </div>
+        <div class="timeline-content"><span class="badge">Uzmanlık · 2005</span><h3>Marmara Üniversitesi Tıp Fakültesi</h3><p>Dermatoloji Anabilim Dalı · Uzmanlık Eğitimi</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">1999 – 2000</div>
-        <div class="timeline-content">
-          <h3>Kocaeli Üniversitesi Tıp Fakültesi</h3>
-          <p>Çocuk Cerrahisi Anabilim Dalı</p>
-        </div>
+        <div class="timeline-content"><h3>Kocaeli Üniversitesi Tıp Fakültesi</h3><p>Çocuk Cerrahisi Anabilim Dalı</p></div>
       </div>
     </div>
   </div>
@@ -280,37 +239,51 @@
   <div class="container">
     <p class="section-label">Hasta Deneyimleri</p>
     <h2 class="section-title">Ne <em>Dediler?</em></h2>
-    <div class="reviews-summary">
-      <div class="reviews-score">
-        <div class="reviews-score-num">5.0</div>
-        <div class="reviews-score-stars">★★★★★</div>
-        <div class="reviews-score-label">2 değerlendirme</div>
+
+    <div class="reviews-top">
+      <div class="reviews-score-box">
+        <div class="score-big" id="avg-score">—</div>
+        <div class="score-stars" id="avg-stars">★★★★★</div>
+        <div class="score-count" id="review-count">yükleniyor...</div>
       </div>
       <div class="reviews-breakdown">
-        <div class="breakdown-row"><span class="breakdown-label">Zamanlama</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
-        <div class="breakdown-row"><span class="breakdown-label">İlgi</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
-        <div class="breakdown-row"><span class="breakdown-label">Ortam</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
+        <div class="breakdown-row"><span class="breakdown-label">Zamanlama</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-zaman" style="width:0%"></div></div><span class="breakdown-val" id="val-zaman">—</span></div>
+        <div class="breakdown-row"><span class="breakdown-label">İlgi</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-ilgi" style="width:0%"></div></div><span class="breakdown-val" id="val-ilgi">—</span></div>
+        <div class="breakdown-row"><span class="breakdown-label">Genel</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-genel" style="width:0%"></div></div><span class="breakdown-val" id="val-genel">—</span></div>
       </div>
     </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"17 yaşındaki oğlumun yüzünde 5 yıldır artarak devam eden sivilce sorununu çözdü. Gerçekten çok memnun kaldık, teşekkürler."</p>
-        <div class="review-author">
-          <div class="review-avatar">EÜ</div>
-          <div><div class="review-name">E*** Ü***</div><div class="review-meta">Ağustos 2021 · doktorsitesi.com</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Çok ilgili ve açıklayıcı bir hekimdi. Sorunumu dikkatle dinledi, tedavim çok iyi sonuç verdi. Kesinlikle tavsiye ederim."</p>
-        <div class="review-author">
-          <div class="review-avatar">HY</div>
-          <div><div class="review-name">H*** Y***</div><div class="review-meta">doktorsitesi.com</div></div>
-        </div>
-      </div>
+
+    <div class="reviews-grid" id="reviews-list">
+      <p class="reviews-empty">Yorumlar yükleniyor...</p>
     </div>
-    <a class="reviews-link" href="https://www.doktorsitesi.com/dr-ogr-uyesi-ozlem-akin/dermatoloji/istanbul" target="_blank" rel="noopener">Tüm yorumları doktorsitesi.com'da görün →</a>
+
+    <div class="review-form-wrap">
+      <h3>✍️ Görüşünüzü Paylaşın</h3>
+      <form id="review-form">
+        <div class="review-form-group">
+          <label>Puanınız</label>
+          <div class="star-input">
+            <input type="radio" name="yildiz" id="s5" value="5"><label for="s5">★</label>
+            <input type="radio" name="yildiz" id="s4" value="4"><label for="s4">★</label>
+            <input type="radio" name="yildiz" id="s3" value="3"><label for="s3">★</label>
+            <input type="radio" name="yildiz" id="s2" value="2"><label for="s2">★</label>
+            <input type="radio" name="yildiz" id="s1" value="1"><label for="s1">★</label>
+          </div>
+        </div>
+        <div class="review-form-group">
+          <label for="r-name">Ad Soyad</label>
+          <input type="text" id="r-name" placeholder="Adınız Soyadınız" required />
+        </div>
+        <div class="review-form-group">
+          <label for="r-yorum">Yorumunuz</label>
+          <textarea id="r-yorum" placeholder="Deneyiminizi paylaşın..." required></textarea>
+        </div>
+        <button type="submit" class="btn-review-submit">Gönder</button>
+        <p id="review-msg"></p>
+      </form>
+    </div>
+
+    <a class="reviews-link" href="https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul" target="_blank" rel="noopener">Doktorsitesi.com yorumlarını da görün →</a>
   </div>
 </section>
 
@@ -324,22 +297,10 @@
         <a class="contact-link" href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">↗ Yeditepe Hastaneleri Profili</a>
       </div>
       <form id="contact-form" action="https://formspree.io/f/xwvylynq" method="POST">
-        <div class="form-group">
-          <label for="name">Ad Soyad</label>
-          <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required />
-        </div>
-        <div class="form-group">
-          <label for="email">E-posta</label>
-          <input type="email" id="email" name="email" placeholder="ornek@email.com" required />
-        </div>
-        <div class="form-group">
-          <label for="subject">Konu</label>
-          <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Mesaj</label>
-          <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
-        </div>
+        <div class="form-group"><label for="name">Ad Soyad</label><input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required /></div>
+        <div class="form-group"><label for="email">E-posta</label><input type="email" id="email" name="email" placeholder="ornek@email.com" required /></div>
+        <div class="form-group"><label for="subject">Konu</label><input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu" required /></div>
+        <div class="form-group"><label for="message">Mesaj</label><textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea></div>
         <button type="submit" class="btn-submit">Gönder</button>
         <p id="form-msg"></p>
       </form>
@@ -353,39 +314,137 @@
 </footer>
 
 <script>
-  const form = document.getElementById('contact-form');
-  const msg = document.getElementById('form-msg');
+const SUPA_URL = 'https://logtxzmynlqnbhifqkze.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ3R4em15bmxxbmJoaWZxa3plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MDAyMjQsImV4cCI6MjA5MzQ3NjIyNH0.8k9FxQGRM25KMrIiwfSXTw0TxE9rgT3094MMiZXCLyY';
 
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
-    btn.disabled = true;
-    btn.textContent = 'Gönderiliyor...';
-    msg.textContent = '';
+function maskName(name) {
+  const parts = name.trim().split(' ');
+  return parts.map(p => p.charAt(0).toUpperCase() + '***').join(' ');
+}
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
+function initials(name) {
+  return name.trim().split(' ').map(p => p.charAt(0).toUpperCase()).join('').slice(0,2);
+}
 
-      if (res.ok) {
-        msg.style.color = '#16a34a';
-        msg.textContent = 'Mesajınız iletildi. Teşekkürler!';
-        form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      msg.style.color = '#dc2626';
-      msg.textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Gönder';
+function stars(n) {
+  return '★'.repeat(n) + '☆'.repeat(5-n);
+}
+
+async function loadReviews() {
+  try {
+    const res = await fetch(`${SUPA_URL}/rest/v1/reviews?onaylandi=eq.true&order=created_at.desc`, {
+      headers: { 'apikey': SUPA_KEY, 'Authorization': `Bearer ${SUPA_KEY}` }
+    });
+    const data = await res.json();
+
+    const list = document.getElementById('reviews-list');
+    const avgEl = document.getElementById('avg-score');
+    const starsEl = document.getElementById('avg-stars');
+    const countEl = document.getElementById('review-count');
+
+    if (!data.length) {
+      list.innerHTML = '<p class="reviews-empty">Henüz onaylanmış yorum yok. İlk yorumu siz yapın!</p>';
+      avgEl.textContent = '—';
+      countEl.textContent = '0 değerlendirme';
+      return;
     }
-  });
-</script>
 
+    const avg = (data.reduce((s,r) => s + r.yildiz, 0) / data.length).toFixed(1);
+    avgEl.textContent = avg;
+    starsEl.textContent = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
+    countEl.textContent = `${data.length} değerlendirme`;
+
+    const pct = (avg / 5 * 100) + '%';
+    document.getElementById('bar-zaman').style.width = pct;
+    document.getElementById('bar-ilgi').style.width = pct;
+    document.getElementById('bar-genel').style.width = pct;
+    document.getElementById('val-zaman').textContent = avg;
+    document.getElementById('val-ilgi').textContent = avg;
+    document.getElementById('val-genel').textContent = avg;
+
+    list.innerHTML = data.map(r => `
+      <div class="review-card">
+        <div class="review-stars">${stars(r.yildiz)}</div>
+        <p class="review-text">"${r.yorum}"</p>
+        <div class="review-author">
+          <div class="review-avatar">${initials(r.ad_soyad)}</div>
+          <div>
+            <div class="review-name">${maskName(r.ad_soyad)}</div>
+            <div class="review-meta">${new Date(r.created_at).toLocaleDateString('tr-TR', {year:'numeric',month:'long'})}</div>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+// Yorum formu
+document.getElementById('review-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-review-submit');
+  const msg = document.getElementById('review-msg');
+  const yildiz = this.querySelector('input[name="yildiz"]:checked');
+
+  if (!yildiz) {
+    msg.style.color = '#dc2626';
+    msg.textContent = 'Lütfen bir puan seçin.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Gönderiliyor...';
+
+  try {
+    const res = await fetch(`${SUPA_URL}/rest/v1/reviews`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPA_KEY,
+        'Authorization': `Bearer ${SUPA_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        ad_soyad: document.getElementById('r-name').value.trim(),
+        yildiz: parseInt(yildiz.value),
+        yorum: document.getElementById('r-yorum').value.trim()
+      })
+    });
+
+    if (res.ok || res.status === 201) {
+      msg.style.color = '#16a34a';
+      msg.textContent = 'Yorumunuz alındı! İncelendikten sonra yayınlanacak. Teşekkürler 🙏';
+      this.reset();
+    } else {
+      throw new Error();
+    }
+  } catch {
+    msg.style.color = '#dc2626';
+    msg.textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Gönder';
+  }
+});
+
+// İletişim formu
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-submit');
+  const msg = document.getElementById('form-msg');
+  btn.disabled = true;
+  btn.textContent = 'Gönderiliyor...';
+  try {
+    const res = await fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} });
+    if (res.ok) { msg.style.color='#16a34a'; msg.textContent='Mesajınız iletildi. Teşekkürler!'; this.reset(); }
+    else throw new Error();
+  } catch { msg.style.color='#dc2626'; msg.textContent='Bir hata oluştu, lütfen tekrar deneyin.'; }
+  finally { btn.disabled=false; btn.textContent='Gönder'; }
+});
+
+loadReviews();
+</script>
 </body>
 </html>
