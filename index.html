@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --blue:         #2F80ED;
       --blue-dark:    #1A5FB8;
@@ -21,9 +20,7 @@
       --text-body:    #374151;
       --radius:       12px;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Jost', sans-serif;
       font-size: 17px;
@@ -32,7 +29,6 @@
       background: var(--bg-white);
       overflow-x: hidden;
     }
-
     nav {
       position: sticky;
       top: 0;
@@ -46,35 +42,11 @@
       justify-content: space-between;
       height: 60px;
     }
-
-    .nav-logo {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--blue);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: clamp(0.75rem, 3vw, 2rem);
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-body);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .nav-logo { font-size: 1rem; font-weight: 600; color: var(--blue); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; gap: clamp(0.75rem, 3vw, 2rem); list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-body); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--blue); }
-
-    @media (max-width: 480px) {
-      .nav-links { gap: 0.6rem; }
-      .nav-links a { font-size: 0.78rem; }
-    }
+    @media (max-width: 480px) { .nav-links { gap: 0.6rem; } .nav-links a { font-size: 0.78rem; } }
 
     .hero {
       min-height: calc(100svh - 60px);
@@ -85,537 +57,111 @@
       padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 8vw, 6rem);
       background: linear-gradient(135deg, var(--bg-off) 0%, #EEF4FD 60%, var(--nude) 100%);
     }
-
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 2.5rem 1.25rem;
-        min-height: auto;
-        gap: 2rem;
-      }
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; min-height: auto; gap: 2rem; }
       .hero-image-wrap { order: -1; }
     }
-
-    .hero-sub {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--text-heading);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--blue);
-    }
-
-    .hero-title {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--blue-dark);
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-desc {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text-body);
-      max-width: 480px;
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero-desc { margin-left: auto; margin-right: auto; }
-    }
-
+    .hero-sub { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 300; line-height: 1.15; color: var(--text-heading); margin-bottom: 0.5rem; }
+    .hero h1 em { font-style: italic; color: var(--blue); }
+    .hero-title { font-size: 1rem; font-weight: 500; color: var(--blue-dark); margin-bottom: 1.25rem; }
+    .hero-desc { font-size: 1rem; line-height: 1.75; color: var(--text-body); max-width: 480px; margin-bottom: 2rem; }
+    @media (max-width: 768px) { .hero-desc { margin-left: auto; margin-right: auto; } }
     .btn-primary {
-      display: inline-block;
-      background: var(--blue);
-      color: #fff;
-      padding: 0.85rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: background 0.25s, transform 0.2s;
+      display: inline-block; background: var(--blue); color: #fff;
+      padding: 0.85rem 2rem; border-radius: 50px; text-decoration: none;
+      font-weight: 500; font-size: 0.95rem; transition: background 0.25s, transform 0.2s;
     }
-
-    .btn-primary:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
-    }
-
-    .hero-image-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .hero-image-wrap { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
     .hero-img-frame {
-      width: clamp(200px, 45vw, 340px);
-      aspect-ratio: 3/4;
-      border-radius: 160px 160px 120px 120px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(47,128,237,0.18);
-      border: 4px solid var(--blue-hover);
+      width: clamp(200px, 45vw, 340px); aspect-ratio: 3/4;
+      border-radius: 160px 160px 120px 120px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(47,128,237,0.18); border: 4px solid var(--blue-hover);
     }
+    .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .stats { display: flex; gap: 1.5rem; justify-content: center; }
+    .stat { text-align: center; background: white; border-radius: var(--radius); padding: 0.75rem 1.25rem; box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .stat-num { font-size: 1.6rem; font-weight: 600; color: var(--blue); line-height: 1; }
+    .stat-label { font-size: 0.72rem; color: var(--text-body); margin-top: 0.2rem; }
 
-    .hero-img-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .stats {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .stat {
-      text-align: center;
-      background: white;
-      border-radius: var(--radius);
-      padding: 0.75rem 1.25rem;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-    }
-
-    .stat-num {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--blue);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.72rem;
-      color: var(--text-body);
-      margin-top: 0.2rem;
-    }
-
-    section {
-      padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 8vw, 6rem);
-    }
-
+    section { padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 8vw, 6rem); }
     section:nth-child(even) { background: var(--bg-off); }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.5rem; }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 300; color: var(--text-heading); margin-bottom: 2.5rem; }
+    .section-title em { font-style: italic; color: var(--blue); }
 
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.5rem;
-    }
+    .timeline { display: flex; flex-direction: column; gap: 0; max-width: 720px; }
+    .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem 2rem; padding: 1.5rem 0; border-bottom: 1px solid #E5EAF0; }
+    @media (max-width: 560px) { .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; } }
+    .timeline-date { font-size: 0.8rem; color: var(--blue); font-weight: 500; padding-top: 0.15rem; white-space: nowrap; }
+    .timeline-content h3 { font-size: 1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.2rem; }
+    .timeline-content p { font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
+    .badge { display: inline-block; font-size: 0.72rem; font-weight: 500; background: #EEF4FD; color: var(--blue); border-radius: 20px; padding: 0.2rem 0.65rem; margin-bottom: 0.4rem; }
 
-    .section-title {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 300;
-      color: var(--text-heading);
-      margin-bottom: 2.5rem;
-    }
+    .memberships { display: flex; flex-direction: column; gap: 0.75rem; max-width: 600px; }
+    .membership-item { display: flex; align-items: center; gap: 1rem; background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1rem 1.25rem; }
+    .membership-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
 
-    .section-title em {
-      font-style: italic;
-      color: var(--blue);
-    }
+    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .expertise-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.75rem; transition: box-shadow 0.25s, transform 0.25s; }
+    .expertise-card:hover { box-shadow: 0 8px 30px rgba(47,128,237,0.12); transform: translateY(-3px); }
+    .expertise-icon { width: 44px; height: 44px; background: #EEF4FD; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1rem; }
+    .expertise-card h3 { font-size: 1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.4rem; }
+    .expertise-card p { font-size: 0.88rem; line-height: 1.6; color: var(--text-body); }
 
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      max-width: 720px;
-    }
+    .pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .pub-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 1rem; text-align: center; }
+    .pub-num { font-size: 2rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .pub-label { font-size: 0.8rem; color: var(--text-body); margin-top: 0.3rem; }
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 1rem 2rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #E5EAF0;
-    }
-
-    @media (max-width: 560px) {
-      .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; }
-    }
-
-    .timeline-date {
-      font-size: 0.8rem;
-      color: var(--blue);
-      font-weight: 500;
-      padding-top: 0.15rem;
-      white-space: nowrap;
-    }
-
-    .timeline-content h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-heading);
-      margin-bottom: 0.2rem;
-    }
-
-    .timeline-content p {
-      font-size: 0.9rem;
-      color: var(--text-body);
-      line-height: 1.5;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 500;
-      background: #EEF4FD;
-      color: var(--blue);
-      border-radius: 20px;
-      padding: 0.2rem 0.65rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .memberships {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      max-width: 600px;
-    }
-
-    .membership-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: white;
-      border: 1px solid #E5EAF0;
-      border-radius: var(--radius);
-      padding: 1rem 1.25rem;
-    }
-
-    .membership-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--blue);
-      flex-shrink: 0;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .expertise-card {
-      background: white;
-      border: 1px solid #E5EAF0;
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      transition: box-shadow 0.25s, transform 0.25s;
-    }
-
-    .expertise-card:hover {
-      box-shadow: 0 8px 30px rgba(47,128,237,0.12);
-      transform: translateY(-3px);
-    }
-
-    .expertise-icon {
-      width: 44px;
-      height: 44px;
-      background: #EEF4FD;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .expertise-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-heading);
-      margin-bottom: 0.4rem;
-    }
-
-    .expertise-card p {
-      font-size: 0.88rem;
-      line-height: 1.6;
-      color: var(--text-body);
-    }
-
-    .pub-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .pub-card {
-      background: white;
-      border: 1px solid #E5EAF0;
-      border-radius: var(--radius);
-      padding: 1.5rem 1rem;
-      text-align: center;
-    }
-
-    .pub-num {
-      font-size: 2rem;
-      font-weight: 300;
-      color: var(--blue);
-      line-height: 1;
-    }
-
-    .pub-label {
-      font-size: 0.8rem;
-      color: var(--text-body);
-      margin-top: 0.3rem;
-    }
-
-    /* REVIEWS */
-    .reviews-summary {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      background: white;
-      border: 1px solid #E5EAF0;
-      border-radius: var(--radius);
-      padding: 1.5rem 2rem;
-      margin-bottom: 2rem;
-      max-width: 400px;
-    }
-
-    .reviews-score {
-      text-align: center;
-    }
-
-    .reviews-score-num {
-      font-size: 3.5rem;
-      font-weight: 300;
-      color: var(--blue);
-      line-height: 1;
-    }
-
-    .reviews-score-stars {
-      color: #F59E0B;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
-      margin: 0.3rem 0;
-    }
-
-    .reviews-score-label {
-      font-size: 0.78rem;
-      color: var(--text-body);
-    }
-
-    .reviews-breakdown {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .breakdown-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.82rem;
-      color: var(--text-body);
-    }
-
+    .reviews-summary { display: flex; align-items: center; gap: 2rem; background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 2rem; margin-bottom: 2rem; max-width: 400px; }
+    .reviews-score { text-align: center; }
+    .reviews-score-num { font-size: 3.5rem; font-weight: 300; color: var(--blue); line-height: 1; }
+    .reviews-score-stars { color: #F59E0B; font-size: 1.1rem; letter-spacing: 2px; margin: 0.3rem 0; }
+    .reviews-score-label { font-size: 0.78rem; color: var(--text-body); }
+    .reviews-breakdown { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+    .breakdown-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; color: var(--text-body); }
     .breakdown-label { width: 70px; }
-
-    .breakdown-bar {
-      flex: 1;
-      height: 6px;
-      background: #E5EAF0;
-      border-radius: 3px;
-      overflow: hidden;
-    }
-
-    .breakdown-fill {
-      height: 100%;
-      background: var(--blue);
-      border-radius: 3px;
-    }
-
+    .breakdown-bar { flex: 1; height: 6px; background: #E5EAF0; border-radius: 3px; overflow: hidden; }
+    .breakdown-fill { height: 100%; background: var(--blue); border-radius: 3px; }
     .breakdown-val { width: 24px; text-align: right; font-weight: 500; color: var(--blue); }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .review-card {
-      background: white;
-      border: 1px solid #E5EAF0;
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+    .review-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
     .review-stars { color: #F59E0B; font-size: 0.9rem; }
-
-    .review-text {
-      font-size: 0.9rem;
-      line-height: 1.65;
-      color: var(--text-body);
-      flex: 1;
-    }
-
-    .review-author {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .review-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), var(--blue-hover));
-      color: white;
-      font-weight: 600;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
+    .review-text { font-size: 0.9rem; line-height: 1.65; color: var(--text-body); flex: 1; }
+    .review-author { display: flex; align-items: center; gap: 0.75rem; }
+    .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-hover)); color: white; font-weight: 600; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .review-name { font-weight: 600; font-size: 0.88rem; color: var(--text-heading); }
     .review-meta { font-size: 0.75rem; color: #9CA3AF; }
-
-    .reviews-link {
-      display: inline-block;
-      color: var(--blue);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      border-bottom: 1px solid var(--blue-hover);
-      padding-bottom: 1px;
-      transition: color 0.2s;
-    }
-
+    .reviews-link { display: inline-block; color: var(--blue); font-size: 0.9rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--blue-hover); padding-bottom: 1px; transition: color 0.2s; }
     .reviews-link:hover { color: var(--blue-dark); }
 
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    @media (max-width: 680px) {
-      .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
-    }
-
-    .contact-info p {
-      font-size: 0.95rem;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-      color: var(--text-body);
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--blue);
-      font-weight: 500;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    @media (max-width: 680px) { .contact-wrap { grid-template-columns: 1fr; gap: 2rem; } }
+    .contact-info p { font-size: 0.95rem; line-height: 1.75; margin-bottom: 1.5rem; color: var(--text-body); }
+    .contact-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--blue); font-weight: 500; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
     .contact-link:hover { color: var(--blue-dark); }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin-bottom: 1rem;
-    }
-
-    label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-heading);
-    }
-
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    label { font-size: 0.82rem; font-weight: 500; color: var(--text-heading); }
     input, textarea {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text-body);
-      background: var(--bg-off);
-      border: 1.5px solid #D1D9E6;
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      width: 100%;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: 'Jost', sans-serif; font-size: 0.95rem; color: var(--text-body);
+      background: var(--bg-off); border: 1.5px solid #D1D9E6; border-radius: 8px;
+      padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
     }
-
-    input:focus, textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(47,128,237,0.12);
-    }
-
+    input:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,128,237,0.12); }
     textarea { resize: vertical; min-height: 120px; }
-
     .btn-submit {
-      width: 100%;
-      background: var(--blue);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 0.9rem;
-      font-family: 'Jost', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.25s, transform 0.2s;
-      margin-top: 0.5rem;
+      width: 100%; background: var(--blue); color: white; border: none;
+      border-radius: 50px; padding: 0.9rem; font-family: 'Jost', sans-serif;
+      font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.25s, transform 0.2s; margin-top: 0.5rem;
     }
+    .btn-submit:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    #form-msg { font-size: 0.85rem; margin-top: 0.75rem; min-height: 1.2em; }
 
-    .btn-submit:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
-    }
-
-    #form-msg {
-      font-size: 0.85rem;
-      margin-top: 0.75rem;
-      min-height: 1.2em;
-    }
-
-    footer {
-      background: var(--text-heading);
-      color: rgba(255,255,255,0.9);
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.82rem;
-      font-weight: 500;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
+    footer { background: var(--text-heading); color: rgba(255,255,255,0.9); text-align: center; padding: 1.5rem 1rem; font-size: 0.82rem; font-weight: 500; }
+    footer a { color: #fff; text-decoration: none; font-weight: 600; }
     .container { max-width: 1100px; margin: 0 auto; }
   </style>
 </head>
@@ -636,30 +182,17 @@
     <p class="hero-sub">Dermatoloji Uzmanı · Yeditepe Üniversitesi</p>
     <h1>Dr. <em>Özlem</em> Akın</h1>
     <p class="hero-title">Dr. Öğretim Üyesi</p>
-    <p class="hero-desc">
-      20 yılı aşkın klinik ve akademik deneyimiyle dermatoloji alanında hasta odaklı,
-      kanıta dayalı yaklaşımlar sunan uzman bir hekim.
-    </p>
-<a class="btn-primary" href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">Randevu için iletişime geçin</a>
+    <p class="hero-desc">20 yılı aşkın klinik ve akademik deneyimiyle dermatoloji alanında hasta odaklı, kanıta dayalı yaklaşımlar sunan uzman bir hekim.</p>
+    <a class="btn-primary" href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">Randevu için iletişime geçin</a>
   </div>
-
   <div class="hero-image-wrap">
     <div class="hero-img-frame">
       <img src="ozlem-akin.jpg" alt="Dr. Özlem Akın" />
     </div>
     <div class="stats">
-      <div class="stat">
-        <div class="stat-num">20+</div>
-        <div class="stat-label">Yıl Deneyim</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">12</div>
-        <div class="stat-label">Yabancı Yayın</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">35</div>
-        <div class="stat-label">Bildiri</div>
-      </div>
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Yıl Deneyim</div></div>
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Yabancı Yayın</div></div>
+      <div class="stat"><div class="stat-num">35</div><div class="stat-label">Bildiri</div></div>
     </div>
   </div>
 </section>
@@ -721,26 +254,10 @@
     <p class="section-label">Uzmanlık Alanları</p>
     <h2 class="section-title">Klinik <em>Odaklar</em></h2>
     <div class="expertise-grid">
-      <div class="expertise-card">
-        <div class="expertise-icon">🩺</div>
-        <h3>Genel Dermatoloji</h3>
-        <p>Cilt, saç ve tırnak hastalıklarının tanı ve tedavisi</p>
-      </div>
-      <div class="expertise-card">
-        <div class="expertise-icon">🔬</div>
-        <h3>Dermoskopi</h3>
-        <p>Deri lezyonlarının ileri görüntüleme yöntemleriyle değerlendirilmesi</p>
-      </div>
-      <div class="expertise-card">
-        <div class="expertise-icon">✨</div>
-        <h3>Kozmetik Dermatoloji</h3>
-        <p>Estetik cilt tedavileri ve gençleştirici uygulamalar</p>
-      </div>
-      <div class="expertise-card">
-        <div class="expertise-icon">📚</div>
-        <h3>Akademik Araştırma</h3>
-        <p>Uluslararası yayın ve bilimsel bildirilerle alana katkı</p>
-      </div>
+      <div class="expertise-card"><div class="expertise-icon">🩺</div><h3>Genel Dermatoloji</h3><p>Cilt, saç ve tırnak hastalıklarının tanı ve tedavisi</p></div>
+      <div class="expertise-card"><div class="expertise-icon">🔬</div><h3>Dermoskopi</h3><p>Deri lezyonlarının ileri görüntüleme yöntemleriyle değerlendirilmesi</p></div>
+      <div class="expertise-card"><div class="expertise-icon">✨</div><h3>Kozmetik Dermatoloji</h3><p>Estetik cilt tedavileri ve gençleştirici uygulamalar</p></div>
+      <div class="expertise-card"><div class="expertise-icon">📚</div><h3>Akademik Araştırma</h3><p>Uluslararası yayın ve bilimsel bildirilerle alana katkı</p></div>
     </div>
   </div>
 </section>
@@ -763,8 +280,6 @@
   <div class="container">
     <p class="section-label">Hasta Deneyimleri</p>
     <h2 class="section-title">Ne <em>Dediler?</em></h2>
-
-    <!-- PUAN ÖZETİ -->
     <div class="reviews-summary">
       <div class="reviews-score">
         <div class="reviews-score-num">5.0</div>
@@ -772,35 +287,18 @@
         <div class="reviews-score-label">2 değerlendirme</div>
       </div>
       <div class="reviews-breakdown">
-        <div class="breakdown-row">
-          <span class="breakdown-label">Zamanlama</span>
-          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
-          <span class="breakdown-val">5.0</span>
-        </div>
-        <div class="breakdown-row">
-          <span class="breakdown-label">İlgi</span>
-          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
-          <span class="breakdown-val">5.0</span>
-        </div>
-        <div class="breakdown-row">
-          <span class="breakdown-label">Ortam</span>
-          <div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div>
-          <span class="breakdown-val">5.0</span>
-        </div>
+        <div class="breakdown-row"><span class="breakdown-label">Zamanlama</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
+        <div class="breakdown-row"><span class="breakdown-label">İlgi</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
+        <div class="breakdown-row"><span class="breakdown-label">Ortam</span><div class="breakdown-bar"><div class="breakdown-fill" style="width:100%"></div></div><span class="breakdown-val">5.0</span></div>
       </div>
     </div>
-
-    <!-- YORUM KARTLARI (sadece doktorsitesi'ndeki 2 gerçek yorum) -->
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"17 yaşındaki oğlumun yüzünde 5 yıldır artarak devam eden sivilce sorununu çözdü. Gerçekten çok memnun kaldık, teşekkürler."</p>
         <div class="review-author">
           <div class="review-avatar">EÜ</div>
-          <div>
-            <div class="review-name">E*** Ü***</div>
-            <div class="review-meta">Ağustos 2021 · doktorsitesi.com</div>
-          </div>
+          <div><div class="review-name">E*** Ü***</div><div class="review-meta">Ağustos 2021 · doktorsitesi.com</div></div>
         </div>
       </div>
       <div class="review-card">
@@ -808,17 +306,11 @@
         <p class="review-text">"Çok ilgili ve açıklayıcı bir hekimdi. Sorunumu dikkatle dinledi, tedavim çok iyi sonuç verdi. Kesinlikle tavsiye ederim."</p>
         <div class="review-author">
           <div class="review-avatar">HY</div>
-          <div>
-            <div class="review-name">H*** Y***</div>
-            <div class="review-meta">doktorsitesi.com</div>
-          </div>
+          <div><div class="review-name">H*** Y***</div><div class="review-meta">doktorsitesi.com</div></div>
         </div>
       </div>
     </div>
-
-    <a class="reviews-link" href="https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul" target="_blank" rel="noopener">
-      Tüm yorumları doktorsitesi.com'da görün →
-    </a>
+    <a class="reviews-link" href="https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul" target="_blank" rel="noopener">Tüm yorumları doktorsitesi.com'da görün →</a>
   </div>
 </section>
 
@@ -828,14 +320,10 @@
     <h2 class="section-title">Bana <em>Yazın</em></h2>
     <div class="contact-wrap">
       <div class="contact-info">
-        <p>Sorularınız, randevu talepleriniz veya akademik işbirlikleri için benimle iletişime geçebilirsiniz.<br><br>
-        Yeditepe Üniversitesi Hastaneleri bünyesinde hizmet vermekteyim.</p>
-        <a class="contact-link" href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">
-          ↗ Yeditepe Hastaneleri Profili
-        </a>
+        <p>Sorularınız, randevu talepleriniz veya akademik işbirlikleri için benimle iletişime geçebilirsiniz.<br><br>Yeditepe Üniversitesi Hastaneleri bünyesinde hizmet vermekteyim.</p>
+        <a class="contact-link" href="https://yeditepehastaneleri.com/doktorlar/ozlem-akin" target="_blank" rel="noopener">↗ Yeditepe Hastaneleri Profili</a>
       </div>
-
-      <form id="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/xwvylynq" method="POST">
         <div class="form-group">
           <label for="name">Ad Soyad</label>
           <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required />
@@ -865,32 +353,27 @@
 </footer>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  const form = document.getElementById('contact-form');
+  const msg = document.getElementById('form-msg');
+
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const btn = this.querySelector('.btn-submit');
-    const msg = document.getElementById('form-msg');
+    const btn = form.querySelector('.btn-submit');
     btn.disabled = true;
     btn.textContent = 'Gönderiliyor...';
-    msg.style.color = '';
     msg.textContent = '';
 
-    const body = {
-      name:    this.name.value.trim(),
-      email:   this.email.value.trim(),
-      subject: this.subject.value.trim(),
-      message: this.message.value.trim(),
-    };
-
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
       });
+
       if (res.ok) {
         msg.style.color = '#16a34a';
         msg.textContent = 'Mesajınız iletildi. Teşekkürler!';
-        this.reset();
+        form.reset();
       } else {
         throw new Error();
       }
