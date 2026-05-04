@@ -100,11 +100,10 @@
     /* YORUM FORMU */
     .review-form-wrap { background: #EEF4FD; border: 1px solid #D1E3FB; border-radius: var(--radius); padding: 2rem; margin-bottom: 1.5rem; }
     .review-form-wrap h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 1.25rem; }
-    .star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.25rem; margin-bottom: 1rem; }
+    .star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.1rem; margin-bottom: 1rem; }
     .star-input input { display: none; }
-    .star-input label { font-size: 3.2rem; line-height: 1; color: #D1D5DB; cursor: pointer; transition: color 0.15s; }
-    .star-input label { cursor: pointer; transition: color 0.15s, transform 0.1s; }
-    .star-input label:hover { transform: scale(1.2); }
+    .star-input label { font-size: 3.5rem; line-height: 1; color: #D1D5DB; cursor: pointer; transition: color 0.15s, transform 0.1s; }
+    .star-input label:hover { transform: scale(1.15); }
     .star-input input:checked ~ label,
     .star-input label:hover,
     .star-input label:hover ~ label { color: #F59E0B; }
@@ -147,7 +146,7 @@
   <ul class="nav-links">
     <li><a href="#kariyer">Kariyer</a></li>
     <li><a href="#uzmanlik">Uzmanlık</a></li>
-    <li><a href="#yorumlar">Yorumlar</a></li>
+    <li><a href="#yorumlar">Hasta Görüşleri</a></li>
     <li><a href="#iletisim">İletişim</a></li>
   </ul>
 </nav>
@@ -263,7 +262,7 @@
       <h3>✍️ Görüşünüzü Paylaşın</h3>
       <form id="review-form">
         <div class="review-form-group">
-          <label>Puanınız <span style="font-weight:300;color:#6B7280;font-size:2.78rem;">(yıldıza tıklayın)</span></label>
+          <label>Puanınız <span style="font-weight:300;color:#6B7280;font-size:0.78rem;">(yıldıza tıklayın)</span></label>
           <div class="star-input">
             <input type="radio" name="yildiz" id="s5" value="5"><label for="s5">★</label>
             <input type="radio" name="yildiz" id="s4" value="4"><label for="s4">★</label>
