@@ -77,7 +77,7 @@
 
     .reviews-score-box { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 2rem; text-align: center; min-width: 160px; }
     .score-big { font-size: 4rem; font-weight: 300; color: var(--blue); line-height: 1; }
-    .score-stars { color: #F59E0B; font-size: 1.3rem; letter-spacing: 3px; margin: 0.3rem 0; }
+    .score-stars { color: #F59E0B; font-size: 2rem; letter-spacing: 4px; margin: 0.3rem 0; }
     .score-count { font-size: 0.8rem; color: var(--text-body); }
 
     .reviews-breakdown { display: flex; flex-direction: column; gap: 0.6rem; justify-content: center; }
@@ -102,7 +102,9 @@
     .review-form-wrap h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 1.25rem; }
     .star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.25rem; margin-bottom: 1rem; }
     .star-input input { display: none; }
-    .star-input label { font-size: 2.8rem; color: #D1D5DB; cursor: pointer; transition: color 0.15s; }
+    .star-input label { font-size: 3.2rem; line-height: 1; color: #D1D5DB; cursor: pointer; transition: color 0.15s; }
+    .star-input label { cursor: pointer; transition: color 0.15s, transform 0.1s; }
+    .star-input label:hover { transform: scale(1.2); }
     .star-input input:checked ~ label,
     .star-input label:hover,
     .star-input label:hover ~ label { color: #F59E0B; }
@@ -238,7 +240,7 @@
 <section id="yorumlar">
   <div class="container">
     <p class="section-label">Hasta Deneyimleri</p>
-    <h2 class="section-title">Ne <em>Dediler?</em></h2>
+    <h2 class="section-title">Hasta <em>Görüşleri</em></h2>
 
     <div class="reviews-top">
       <div class="reviews-score-box">
@@ -261,7 +263,7 @@
       <h3>✍️ Görüşünüzü Paylaşın</h3>
       <form id="review-form">
         <div class="review-form-group">
-          <label>Puanınız</label>
+          <label>Puanınız <span style="font-weight:300;color:#6B7280;font-size:0.78rem;">(yıldıza tıklayın)</span></label>
           <div class="star-input">
             <input type="radio" name="yildiz" id="s5" value="5"><label for="s5">★</label>
             <input type="radio" name="yildiz" id="s4" value="4"><label for="s4">★</label>
