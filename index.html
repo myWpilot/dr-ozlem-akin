@@ -127,20 +127,12 @@
     .pub-label { font-size: 0.8rem; color: var(--text-body); margin-top: 0.3rem; }
 
     /* REVIEWS */
-    .reviews-top { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: start; margin-bottom: 2.5rem; }
-    @media (max-width: 600px) { .reviews-top { grid-template-columns: 1fr; gap: 1.5rem; } }
 
     .reviews-score-box { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem 2rem; text-align: center; min-width: 160px; }
     .score-big { font-size: 4rem; font-weight: 300; color: var(--blue); line-height: 1; }
     .score-stars { color: #F59E0B; font-size: 2rem; letter-spacing: 4px; margin: 0.3rem 0; }
     .score-count { font-size: 0.8rem; color: var(--text-body); }
 
-    .reviews-breakdown { display: flex; flex-direction: column; gap: 0.6rem; justify-content: center; }
-    .breakdown-row { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; }
-    .breakdown-label { width: 80px; color: var(--text-body); }
-    .breakdown-bar { flex: 1; height: 8px; background: #E5EAF0; border-radius: 4px; overflow: hidden; }
-    .breakdown-fill { height: 100%; background: var(--blue); border-radius: 4px; transition: width 0.8s ease; }
-    .breakdown-val { width: 30px; text-align: right; font-weight: 600; color: var(--blue); }
 
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.25rem; margin-bottom: 2rem; }
     .review-card { background: white; border: 1px solid #E5EAF0; border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
@@ -296,16 +288,11 @@
     <p class="section-label">Hasta Deneyimleri</p>
     <h2 class="section-title">Hasta <em>Görüşleri</em></h2>
 
-    <div class="reviews-top">
-      <div class="reviews-score-box">
+    <div style="margin-bottom:2rem;">
+      <div class="reviews-score-box" style="display:inline-block;">
         <div class="score-big" id="avg-score">—</div>
         <div class="score-stars" id="avg-stars">★★★★★</div>
         <div class="score-count" id="review-count">yükleniyor...</div>
-      </div>
-      <div class="reviews-breakdown">
-        <div class="breakdown-row"><span class="breakdown-label">Zamanlama</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-zaman" style="width:0%"></div></div><span class="breakdown-val" id="val-zaman">—</span></div>
-        <div class="breakdown-row"><span class="breakdown-label">İlgi</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-ilgi" style="width:0%"></div></div><span class="breakdown-val" id="val-ilgi">—</span></div>
-        <div class="breakdown-row"><span class="breakdown-label">Genel</span><div class="breakdown-bar"><div class="breakdown-fill" id="bar-genel" style="width:0%"></div></div><span class="breakdown-val" id="val-genel">—</span></div>
       </div>
     </div>
 
@@ -414,14 +401,6 @@ async function loadReviews() {
     avgEl.textContent = avg;
     starsEl.textContent = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
     countEl.textContent = `${data.length} değerlendirme`;
-
-    const pct = (avg / 5 * 100) + '%';
-    document.getElementById('bar-zaman').style.width = pct;
-    document.getElementById('bar-ilgi').style.width = pct;
-    document.getElementById('bar-genel').style.width = pct;
-    document.getElementById('val-zaman').textContent = avg;
-    document.getElementById('val-ilgi').textContent = avg;
-    document.getElementById('val-genel').textContent = avg;
 
     list.innerHTML = data.map(r => `
       <div class="review-card">
