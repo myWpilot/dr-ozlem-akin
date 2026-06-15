@@ -1,4 +1,22 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Discovery
 Sitemap: https://www.drozlemakin.com.tr/sitemap.xml
+LLMs: https://www.drozlemakin.com.tr/llms.txt
