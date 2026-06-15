@@ -1,5 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/llms.txt", "destination": "/ai.txt" }
+  "redirects": [
+    { "source": "/llms.txt", "destination": "/ai.txt", "permanent": false }
   ]
 }
