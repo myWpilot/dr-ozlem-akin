@@ -27,30 +27,112 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Özlem Akın",
-    "url": "https://www.drozlemakin.com.tr",
-    "image": "https://www.drozlemakin.com.tr/ozlem-akin.jpg",
-    "description": "Yeditepe Üniversitesi Tıp Fakültesi Dermatoloji Anabilim Dalı Öğretim Üyesi. 20 yılı aşkın klinik ve akademik deneyim.",
-    "jobTitle": "Dr. Öğretim Üyesi",
-    "worksFor": {
-      "@type": "Hospital",
-      "name": "Yeditepe Üniversitesi Hastaneleri",
-      "url": "https://yeditepehastaneleri.com"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Marmara Üniversitesi Tıp Fakültesi"
-    },
-    "medicalSpecialty": "Dermatology",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "İstanbul",
-      "addressCountry": "TR"
-    },
-    "sameAs": [
-      "https://yeditepehastaneleri.com/doktorlar/ozlem-akin",
-      "https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul"
+    "@graph": [
+      {
+        "@type": "Physician",
+        "@id": "https://www.drozlemakin.com.tr/#physician",
+        "name": "Dr. Özlem Akın",
+        "url": "https://www.drozlemakin.com.tr",
+        "image": "https://www.drozlemakin.com.tr/ozlem-akin.jpg",
+        "description": "Dr. Özlem Akın, Yeditepe Üniversitesi Tıp Fakültesi Dermatoloji Anabilim Dalı Öğretim Üyesidir. 20 yılı aşkın klinik ve akademik deneyimiyle İstanbul'da dermatoloji, dermoskopi ve kozmetik dermatoloji alanlarında hizmet vermektedir.",
+        "jobTitle": "Dr. Öğretim Üyesi",
+        "honorificPrefix": "Dr.",
+        "knowsLanguage": ["tr", "en"],
+        "medicalSpecialty": [
+          "Dermatology",
+          "Dermoscopy",
+          "Cosmetic Dermatology"
+        ],
+        "worksFor": {
+          "@type": "Hospital",
+          "name": "Yeditepe Üniversitesi Hastaneleri",
+          "url": "https://yeditepehastaneleri.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "İstanbul",
+            "addressCountry": "TR"
+          }
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Marmara Üniversitesi Tıp Fakültesi",
+            "description": "Dermatoloji Uzmanlık Eğitimi, 2005"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Kocaeli Üniversitesi Tıp Fakültesi"
+          }
+        ],
+        "memberOf": [
+          {"@type": "Organization", "name": "Türk Tabipler Birliği"},
+          {"@type": "Organization", "name": "Deri ve Zührevi Hastalıklar Derneği"},
+          {"@type": "Organization", "name": "Türk Dermatoloji Derneği"},
+          {"@type": "Organization", "name": "European Academy of Dermatology and Venereology"}
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "İstanbul",
+          "addressCountry": "TR"
+        },
+        "sameAs": [
+          "https://yeditepehastaneleri.com/doktorlar/ozlem-akin",
+          "https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "2",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.drozlemakin.com.tr/#website",
+        "url": "https://www.drozlemakin.com.tr",
+        "name": "Dr. Özlem Akın — Dermatoloji Uzmanı",
+        "description": "Dr. Özlem Akın kişisel web sitesi. İstanbul Yeditepe Üniversitesi Dermatoloji Uzmanı.",
+        "inLanguage": "tr",
+        "about": {"@id": "https://www.drozlemakin.com.tr/#physician"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Dr. Özlem Akın hangi hastanede çalışmaktadır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dr. Özlem Akın, İstanbul'da Yeditepe Üniversitesi Hastaneleri bünyesinde Dermatoloji Anabilim Dalı Öğretim Üyesi olarak görev yapmaktadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dr. Özlem Akın'ın uzmanlık alanları nelerdir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dr. Özlem Akın'ın uzmanlık alanları arasında genel dermatoloji, dermoskopi, kozmetik dermatoloji ve akne (sivilce) tedavisi yer almaktadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dr. Özlem Akın'dan nasıl randevu alabilirim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yeditepe Üniversitesi Hastaneleri web sitesi üzerinden veya https://yeditepehastaneleri.com/doktorlar/ozlem-akin adresinden randevu alabilirsiniz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Dr. Özlem Akın kaç yıldır dermatoloji alanında çalışmaktadır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dr. Özlem Akın, 2005 yılında Marmara Üniversitesi Tıp Fakültesi'nde dermatoloji uzmanlığını tamamlamış olup 20 yılı aşkın klinik ve akademik deneyime sahiptir."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
