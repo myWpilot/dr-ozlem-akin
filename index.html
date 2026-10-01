@@ -144,7 +144,6 @@
   <meta name="google-site-verification" content="YZz05XKMbhhTG3DT2WjVkiGgt5VsBkP4fV7OJPsqql8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Özlem Akın — Dermatoloji Uzmanı</title>
-  <link rel="preconnect" href="https://logtxzmynlqnbhifqkze.supabase.co" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" />
@@ -231,27 +230,6 @@
     .review-name { font-weight: 600; font-size: 0.88rem; color: var(--text-heading); }
     .review-meta { font-size: 0.75rem; color: #6B7280; }
     .reviews-empty { color: var(--text-body); font-size: 0.95rem; opacity: 0.6; margin-bottom: 2rem; }
-
-    /* YORUM FORMU */
-    .review-form-wrap { background: #EEF4FD; border: 1px solid #D1E3FB; border-radius: var(--radius); padding: 2rem; margin-bottom: 1.5rem; }
-    .review-form-wrap h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 1.25rem; }
-    .star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.1rem; margin-bottom: 1rem; }
-    .star-input input { display: none; }
-    .star-input label { font-size: 3.5rem; line-height: 1; color: #D1D5DB; cursor: pointer; transition: color 0.15s, transform 0.1s; }
-    .star-input label:hover { transform: scale(1.15); }
-    .star-input input:checked ~ label,
-    .star-input label:hover,
-    .star-input label:hover ~ label { color: #F59E0B; }
-    .review-form-group { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.85rem; }
-    .review-form-group label { font-size: 0.82rem; font-weight: 500; color: var(--text-heading); }
-    .review-form-group input,
-    .review-form-group textarea { font-family: 'Jost',sans-serif; font-size: 0.95rem; color: var(--text-body); background: white; border: 1.5px solid #D1D9E6; border-radius: 8px; padding: 0.75rem 1rem; width: 100%; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
-    .review-form-group input:focus,
-    .review-form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47,128,237,0.12); }
-    .review-form-group textarea { resize: vertical; min-height: 100px; }
-    .btn-review-submit { background: #1A5FB8; color: #fff; border: none; border-radius: 50px; padding: 0.8rem 2rem; font-family: 'Jost',sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.25s; }
-    .btn-review-submit:hover { background: var(--blue-dark); }
-    #review-msg { font-size: 0.85rem; margin-top: 0.75rem; min-height: 1.2em; }
 
     .reviews-link { display: inline-block; color: var(--blue); font-size: 0.9rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--blue-hover); padding-bottom: 1px; }
     .reviews-link:hover { color: var(--blue-dark); }
@@ -392,48 +370,39 @@
 
     <div style="margin-bottom:2rem;">
       <div class="reviews-score-box" style="display:inline-block;">
-        <div class="score-big" id="avg-score">—</div>
-        <div class="score-stars" id="avg-stars">★★★★★</div>
-        <div class="score-count" id="review-count">yükleniyor...</div>
+        <div class="score-big">5.0</div>
+        <div class="score-stars">★★★★★</div>
+        <div class="score-count">2 değerlendirme</div>
       </div>
     </div>
 
-    <div class="reviews-grid" id="reviews-list">
-      <p class="reviews-empty">Yorumlar yükleniyor...</p>
-    </div>
+    <div class="reviews-grid">
 
-    <div class="review-form-wrap">
-      <h3>✍️ Görüşünüzü Paylaşın</h3>
-      <form id="review-form">
-        <div class="review-form-group">
-          <label>Puanınız <span style="font-weight:400;color:#4B5563;font-size:0.78rem;">(yıldıza tıklayın)</span></label>
-          <div style="display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px;margin-bottom:1rem;">
-            <input type="radio" name="yildiz" id="s5" value="5" style="display:none;">
-            <label for="s5" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(5)" onmouseout="resetStars()" onclick="selectStar(5)">★</label>
-            <input type="radio" name="yildiz" id="s4" value="4" style="display:none;">
-            <label for="s4" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(4)" onmouseout="resetStars()" onclick="selectStar(4)">★</label>
-            <input type="radio" name="yildiz" id="s3" value="3" style="display:none;">
-            <label for="s3" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(3)" onmouseout="resetStars()" onclick="selectStar(3)">★</label>
-            <input type="radio" name="yildiz" id="s2" value="2" style="display:none;">
-            <label for="s2" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(2)" onmouseout="resetStars()" onclick="selectStar(2)">★</label>
-            <input type="radio" name="yildiz" id="s1" value="1" style="display:none;">
-            <label for="s1" style="font-size:3rem;color:#D1D5DB;cursor:pointer;transition:color 0.15s;" onmouseover="highlightStars(1)" onmouseout="resetStars()" onclick="selectStar(1)">★</label>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"17 yaşında ki oğlumun yüzünde 5 yıldır artarak devam eden şiddetli akneleri vardı. Bir sürü krem yüz Jeli kullandik, hiç bir işe yaramadı. Bir doktor tavsiyesi ile Özlem Akın'dan randevu aldık. Tani ve tedavi hakkında detaylı bilgi aldık. Bizi ve oğlumuzu güler yüzü ve anlayışı ile rahatlattı. Şiddetli akneler yüzünden rocatune dozunu kademeli artırdı. 4 aydan itibaren sivilceler azalmaya başladı ve şu an sivilceler tamamen yok oldu. Psikolojik olarak zor zamanlardı, Özlem doktor vesilesi ile Allah şifamızı verdi. Kendisine ailece teşekkür eder, sevgi ve saygılarımızı sunarız. Gönül rahatlığı ile Özlem Akın doktora gidip tedavi olabilirsiniz."</p>
+        <div class="review-author">
+          <div class="review-avatar">EÜ</div>
+          <div>
+            <div class="review-name">E*** Ü***</div>
+            <div class="review-meta">Ağustos 2021</div>
           </div>
         </div>
-        <div class="review-form-group">
-          <label for="r-name">Ad Soyad</label>
-          <input type="text" id="r-name" placeholder="Adınız Soyadınız" required />
-        </div>
-        <div class="review-form-group">
-          <label for="r-yorum">Yorumunuz</label>
-          <textarea id="r-yorum" placeholder="Deneyiminizi paylaşın..." required></textarea>
-        </div>
-        <button type="submit" class="btn-review-submit">Gönder</button>
-        <p id="review-msg"></p>
-      </form>
-    </div>
+      </div>
 
-    
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"2008 yılında bir rahatsızlığım için Özlem hanıma gittiğimde uyguladığı tedaviden çok memnun kalmıştım ama yinede yeterli bulmayıp rahmetli Kolsuz Agop'a da gittim. Yapılan uygulamanın en doğru olduğunu daha başka yapılabilecek bir uygulama olmadığını doktorumun genç olmasına rağmen en doğru kararı vererek yaptığı tedavi için tebrik ettiğini söylemişti. Kendisine buradan sonsuz teşekkür ediyorum."</p>
+        <div class="review-author">
+          <div class="review-avatar">MB</div>
+          <div>
+            <div class="review-name">M*** B***</div>
+            <div class="review-meta">Ekim 2018</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -465,113 +434,7 @@
 </footer>
 
 <script>
-const SUPA_URL = 'https://logtxzmynlqnbhifqkze.supabase.co';
-const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ3R4em15bmxxbmJoaWZxa3plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc5MDAyMjQsImV4cCI6MjA5MzQ3NjIyNH0.8k9FxQGRM25KMrIiwfSXTw0TxE9rgT3094MMiZXCLyY';
-
-function maskName(name) {
-  const parts = name.trim().split(' ');
-  return parts.map(p => p.charAt(0).toUpperCase() + '***').join(' ');
-}
-
-function initials(name) {
-  return name.trim().split(' ').map(p => p.charAt(0).toUpperCase()).join('').slice(0,2);
-}
-
-function stars(n) {
-  return '★'.repeat(n) + '☆'.repeat(5-n);
-}
-
-async function loadReviews() {
-  try {
-    const res = await fetch(`${SUPA_URL}/rest/v1/reviews?onaylandi=eq.true&order=created_at.desc`, {
-      headers: { 'apikey': SUPA_KEY, 'Authorization': `Bearer ${SUPA_KEY}` }
-    });
-    const data = await res.json();
-
-    const list = document.getElementById('reviews-list');
-    const avgEl = document.getElementById('avg-score');
-    const starsEl = document.getElementById('avg-stars');
-    const countEl = document.getElementById('review-count');
-
-    if (!data.length) {
-      list.innerHTML = '<p class="reviews-empty">Henüz onaylanmış yorum yok. İlk yorumu siz yapın!</p>';
-      avgEl.textContent = '—';
-      countEl.textContent = '0 değerlendirme';
-      return;
-    }
-
-    const avg = (data.reduce((s,r) => s + r.yildiz, 0) / data.length).toFixed(1);
-    avgEl.textContent = avg;
-    starsEl.textContent = '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
-    countEl.textContent = `${data.length} değerlendirme`;
-
-    list.innerHTML = data.map(r => `
-      <div class="review-card">
-        <div class="review-stars">${stars(r.yildiz)}</div>
-        <p class="review-text">"${r.yorum}"</p>
-        <div class="review-author">
-          <div class="review-avatar">${initials(r.ad_soyad)}</div>
-          <div>
-            <div class="review-name">${maskName(r.ad_soyad)}</div>
-            <div class="review-meta">${new Date(r.created_at).toLocaleDateString('tr-TR', {year:'numeric',month:'long'})}</div>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  } catch(e) {
-    console.error(e);
-  }
-}
-
-// Yorum formu
-document.getElementById('review-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.btn-review-submit');
-  const msg = document.getElementById('review-msg');
-  const yildiz = this.querySelector('input[name="yildiz"]:checked');
-
-  if (!yildiz) {
-    msg.style.color = '#dc2626';
-    msg.textContent = 'Lütfen bir puan seçin.';
-    return;
-  }
-
-  btn.disabled = true;
-  btn.textContent = 'Gönderiliyor...';
-
-  try {
-    const res = await fetch(`${SUPA_URL}/rest/v1/reviews`, {
-      method: 'POST',
-      headers: {
-        'apikey': SUPA_KEY,
-        'Authorization': `Bearer ${SUPA_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({
-        ad_soyad: document.getElementById('r-name').value.trim(),
-        yildiz: parseInt(yildiz.value),
-        yorum: document.getElementById('r-yorum').value.trim()
-      })
-    });
-
-    if (res.ok || res.status === 201) {
-      msg.style.color = '#16a34a';
-      msg.textContent = 'Yorumunuz alındı! İncelendikten sonra yayınlanacak. Teşekkürler 🙏';
-      this.reset();
-    } else {
-      throw new Error();
-    }
-  } catch {
-    msg.style.color = '#dc2626';
-    msg.textContent = 'Bir hata oluştu, lütfen tekrar deneyin.';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Gönder';
-  }
-});
-
-// İletişim formu
+// İletişim formu (Formspree)
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -586,28 +449,6 @@ contactForm.addEventListener('submit', async function(e) {
   } catch { msg.style.color='#dc2626'; msg.textContent='Bir hata oluştu, lütfen tekrar deneyin.'; }
   finally { btn.disabled=false; btn.textContent='Gönder'; }
 });
-
-
-let selectedStar = 0;
-function highlightStars(n) {
-  for(let i=1;i<=5;i++){
-    const l = document.querySelector('label[for="s'+i+'"]');
-    if(l) l.style.color = i<=n ? '#F59E0B' : '#D1D5DB';
-  }
-}
-function resetStars() {
-  for(let i=1;i<=5;i++){
-    const l = document.querySelector('label[for="s'+i+'"]');
-    if(l) l.style.color = i<=selectedStar ? '#F59E0B' : '#D1D5DB';
-  }
-}
-function selectStar(n) {
-  selectedStar = n;
-  document.getElementById('s'+n).checked = true;
-  highlightStars(n);
-}
-
-loadReviews();
 </script>
 </body>
 </html>
