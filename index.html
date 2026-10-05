@@ -37,8 +37,8 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Physician",
-        "@id": "https://www.drozlemakin.com.tr/#physician",
+        "@type": ["Physician", "Person"],
+        "@id": "https://www.drozlemakin.com.tr/#dr-ozlem-akin",
         "name": "Dr. Özlem Akın",
         "url": "https://www.drozlemakin.com.tr",
         "image": "https://www.drozlemakin.com.tr/ozlem-akin.jpg",
@@ -46,6 +46,7 @@
         "jobTitle": "Dr. Öğretim Üyesi, Eğitim Sorumlusu",
         "honorificPrefix": "Dr.",
         "knowsLanguage": ["tr", "en"],
+        "knowsAbout": ["Dermatoloji", "Dermoskopi", "Kozmetik Dermatoloji", "Kronik Yara Tedavisi", "Vitiligo", "Alopesi", "Akne"],
         "medicalSpecialty": ["Dermatology", "Dermoscopy", "Cosmetic Dermatology"],
         "hasOccupation": {
           "@type": "Occupation",
@@ -63,8 +64,8 @@
           }
         },
         "alumniOf": [
-          { "@type": "EducationalOrganization", "name": "Marmara Üniversitesi Tıp Fakültesi", "description": "Dermatoloji Uzmanlık Eğitimi, 2005" },
-          { "@type": "EducationalOrganization", "name": "Kocaeli Üniversitesi Tıp Fakültesi" }
+          { "@type": "CollegeOrUniversity", "name": "Marmara Üniversitesi Tıp Fakültesi", "description": "Dermatoloji Uzmanlık Eğitimi, 2005" },
+          { "@type": "CollegeOrUniversity", "name": "Kocaeli Üniversitesi Tıp Fakültesi", "description": "Tıp Doktorası (MD), 1998" }
         ],
         "memberOf": [
           { "@type": "Organization", "name": "Türk Tabipler Birliği" },
@@ -73,6 +74,7 @@
           { "@type": "Organization", "name": "European Academy of Dermatology and Venereology" }
         ],
         "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
+        "mainEntityOfPage": { "@id": "https://www.drozlemakin.com.tr/#profilepage" },
         "sameAs": [
           "https://yeditepehastaneleri.com/doktorlar/ozlem-akin",
           "https://orcid.org/0000-0002-9605-8738",
@@ -90,11 +92,22 @@
       {
         "@type": "WebSite",
         "@id": "https://www.drozlemakin.com.tr/#website",
-        "url": "https://www.drozlemakin.com.tr",
+        "url": "https://www.drozlemakin.com.tr/",
         "name": "Dr. Özlem Akın — Dermatoloji Uzmanı",
         "description": "Dr. Özlem Akın kişisel web sitesi. İstanbul Yeditepe Üniversitesi Dermatoloji Uzmanı.",
         "inLanguage": "tr",
-        "about": { "@id": "https://www.drozlemakin.com.tr/#physician" }
+        "publisher": { "@id": "https://www.drozlemakin.com.tr/#dr-ozlem-akin" }
+      },
+      {
+        "@type": ["ProfilePage", "WebPage"],
+        "@id": "https://www.drozlemakin.com.tr/#profilepage",
+        "url": "https://www.drozlemakin.com.tr/",
+        "name": "Dr. Özlem Akın | Dermatoloji Uzmanı — İstanbul",
+        "description": "Dr. Öğr. Üyesi Özlem Akın'ın dermatoloji uzmanlığı, akademik geçmişi, yayınları ve çalışma alanlarına ilişkin profesyonel profil sayfası.",
+        "inLanguage": "tr",
+        "isPartOf": { "@id": "https://www.drozlemakin.com.tr/#website" },
+        "mainEntity": { "@id": "https://www.drozlemakin.com.tr/#dr-ozlem-akin" },
+        "dateModified": "2026-10-06"
       },
       {
         "@type": "FAQPage",
