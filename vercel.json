@@ -1,5 +1,6 @@
 {
   "redirects": [
-    { "source": "/llms.txt", "destination": "/ai.txt", "permanent": false }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/en/index.html", "destination": "/en/", "permanent": true }
   ]
 }
