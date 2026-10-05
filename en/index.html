@@ -170,6 +170,11 @@
     .stat { text-align: center; background: white; border-radius: var(--radius); padding: 0.75rem 1.1rem; box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
     .stat-num { font-size: 1.5rem; font-weight: 600; color: var(--blue); line-height: 1; }
     .stat-label { font-size: 0.7rem; color: var(--text-body); margin-top: 0.2rem; }
+    /* tooltip */
+    .stat-info { display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px; border-radius: 50%; background: #CBD5E1; color: #fff; font-size: 0.55rem; font-weight: 700; cursor: default; margin-left: 3px; vertical-align: middle; position: relative; }
+    .stat-info::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; font-size: 0.68rem; font-weight: 400; line-height: 1.4; white-space: nowrap; padding: 5px 9px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 10; }
+    .stat-info:hover::after, .stat-info:focus::after { opacity: 1; }
+    @media (max-width: 480px) { .stat-info::after { white-space: normal; width: 160px; left: auto; right: 0; transform: none; } }
 
     /* SECTIONS */
     section { padding: clamp(3rem,8vw,6rem) clamp(1.25rem,8vw,6rem); }
@@ -294,7 +299,7 @@
       <div class="stat"><div class="stat-num" id="exp-years">28</div><div class="stat-label">Years Experience</div></div>
       <div class="stat"><div class="stat-num">16</div><div class="stat-label">Int'l Publications</div></div>
       <div class="stat"><div class="stat-num">520</div><div class="stat-label">Academic Citations</div></div>
-      <div class="stat"><div class="stat-num">H9</div><div class="stat-label">H-index</div></div>
+      <div class="stat"><div class="stat-num">H9</div><div class="stat-label">H-index <span class="stat-info" data-tip="9+ papers each cited 9+ times. Measures research impact." tabindex="0">i</span></div></div>
     </div>
   </div>
 </section>
