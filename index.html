@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Özlem Akın — Dermatoloji Uzmanı | İstanbul</title>
-  <meta name="description" content="Dr. Özlem Akın — Yeditepe Üniversitesi Dermatoloji Anabilim Dalı Dr. Öğretim Üyesi, Eğitim Sorumlusu. 20 yılı aşkın deneyim, 16 uluslararası makale, H-index 9, patent sahibi. İstanbul." />
+  <meta name="description" content="Dr. Özlem Akın — Yeditepe Üniversitesi Dermatoloji Anabilim Dalı Dr. Öğretim Üyesi, Eğitim Sorumlusu. 28 yıllık deneyim, 16 uluslararası makale, H-index 9, patent sahibi. İstanbul." />
   <meta name="keywords" content="dermatoloji uzmanı istanbul, özlem akın dermatoloji, yeditepe dermatoloji, cilt hastalıkları istanbul, dermoskopi, kozmetik dermatoloji, akne tedavisi" />
   <meta name="author" content="Dr. Özlem Akın" />
   <meta name="robots" content="index, follow" />
@@ -14,7 +14,7 @@
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Dr. Özlem Akın — Dermatoloji Uzmanı | İstanbul" />
-  <meta property="og:description" content="Yeditepe Üniversitesi Dermatoloji Dr. Öğretim Üyesi. 20+ yıl klinik ve akademik deneyim. H-index 9 · 520 atıf · Patent." />
+  <meta property="og:description" content="Yeditepe Üniversitesi Dermatoloji Dr. Öğretim Üyesi. 28 yıllık klinik ve akademik deneyim. H-index 9 · 520 atıf · Patent." />
   <meta property="og:url" content="https://www.drozlemakin.com.tr/" />
   <meta property="og:image" content="https://www.drozlemakin.com.tr/ozlem-akin.jpg" />
   <meta property="og:locale" content="tr_TR" />
@@ -189,6 +189,11 @@
     .stat { text-align: center; background: white; border-radius: var(--radius); padding: 0.75rem 1.1rem; box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
     .stat-num { font-size: 1.5rem; font-weight: 600; color: var(--blue); line-height: 1; }
     .stat-label { font-size: 0.7rem; color: var(--text-body); margin-top: 0.2rem; }
+    /* tooltip */
+    .stat-info { display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px; border-radius: 50%; background: #CBD5E1; color: #fff; font-size: 0.55rem; font-weight: 700; cursor: default; margin-left: 3px; vertical-align: middle; position: relative; }
+    .stat-info::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: #1e293b; color: #fff; font-size: 0.68rem; font-weight: 400; line-height: 1.4; white-space: nowrap; padding: 5px 9px; border-radius: 6px; pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 10; }
+    .stat-info:hover::after, .stat-info:focus::after { opacity: 1; }
+    @media (max-width: 480px) { .stat-info::after { white-space: normal; width: 160px; left: auto; right: 0; transform: none; } }
 
     /* ── SECTIONS ── */
     section { padding: clamp(3rem,8vw,6rem) clamp(1.25rem,8vw,6rem); }
@@ -323,7 +328,7 @@
       <div class="stat"><div class="stat-num" id="exp-years">28</div><div class="stat-label">Yıl Deneyim</div></div>
       <div class="stat"><div class="stat-num">16</div><div class="stat-label">Uluslararası Makale</div></div>
       <div class="stat"><div class="stat-num">520</div><div class="stat-label">Akademik Atıf</div></div>
-      <div class="stat"><div class="stat-num">H9</div><div class="stat-label">H-index</div></div>
+      <div class="stat"><div class="stat-num">H9</div><div class="stat-label">H-index <span class="stat-info" data-tip="En az 9 makalesi 9+ kez atıf almış. Araştırma etkisini ölçer." tabindex="0">i</span></div></div>
     </div>
   </div>
 </section>
