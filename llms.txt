@@ -1,36 +1,43 @@
-# Dr. Özlem Akın — Kişisel Web Sitesi
-# https://www.drozlemakin.com.tr
+# Dr. Özlem Akın — Dermatoloji Uzmanı | İstanbul
+
+> Dr. Özlem Akın, Yeditepe Üniversitesi Tıp Fakültesi Dermatoloji Anabilim Dalı Dr. Öğretim Üyesi ve Eğitim Sorumlusudur. İstanbul'da 28 yıllık klinik ve akademik deneyimiyle görev yapmaktadır.
+
+## Sayfalar
+
+- [Ana Sayfa](https://www.drozlemakin.com.tr/)
+- [English Version](https://www.drozlemakin.com.tr/en/)
 
 ## Hakkında
 
-Dr. Özlem Akın, İstanbul'da Yeditepe Üniversitesi Tıp Fakültesi Dermatoloji Anabilim Dalı'nda görev yapan bir Dr. Öğretim Üyesi ve dermatoloji uzmanıdır. 20 yılı aşkın klinik ve akademik deneyime sahiptir.
+Dr. Özlem Akın, İstanbul'da Yeditepe Üniversitesi Tıp Fakültesi Dermatoloji Anabilim Dalı'nda görev yapan Dr. Öğretim Üyesi ve Eğitim Sorumlusudur. 2005'ten bu yana dermatoloji uzmanı olarak aktif klinik ve akademik kariyer sürdürmektedir. Google Scholar H-index 9, 520 atıf, i10-index 9 değerlerine sahiptir. ORCID: 0000-0002-9605-8738.
 
 ## Uzmanlık Alanları
 
 - Genel Dermatoloji (cilt, saç, tırnak hastalıkları)
 - Dermoskopi (deri lezyonlarının ileri görüntülemesi)
 - Kozmetik Dermatoloji (estetik cilt tedavileri)
+- Kronik Yara Tedavisi
 - Akademik Araştırma ve Yayıncılık
 
 ## Akademik Kariyer
 
-- 2008 – Günümüz: Yeditepe Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı, Dr. Öğretim Üyesi
+- 2008 – Günümüz: Yeditepe Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı, Dr. Öğretim Üyesi, Eğitim Sorumlusu
 - 2005 – 2008: Maltepe Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı
 - 2000 – 2005: Marmara Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı (Uzmanlık Eğitimi)
-- 1999 – 2000: Kocaeli Üniversitesi Tıp Fakültesi, Çocuk Cerrahisi Anabilim Dalı
-
-## Eğitim ve Uzmanlık
-
-- Uzmanlık: Marmara Üniversitesi Tıp Fakültesi, Dermatoloji (2005)
-- Yabancı Dil: İngilizce
+- 1999 – 2000: Kocaeli Üniversitesi Tıp Fakültesi, Çocuk Cerrahisi Anabilim Dalı (Mecburi Hizmet)
+- 1991 – 1998: Marmara Üniversitesi Tıp Fakültesi (Tıp Doktorası, MD)
 
 ## Bilimsel Katkılar
 
-- 10 yabancı dilde yayın
-- 2 Türkçe yayın
+- 16 uluslararası hakemli makale (SCI/SSCI)
+- 7 ulusal makale
 - 3 uluslararası bildiri
-- 32 ulusal bildiri
-- 12 dergi makalesi
+- 28 ulusal bildiri
+- 6 ulusal sözlü bildiri
+- 3 davetli konuşmacı
+- 1 patent (TR 2025 002367 A1 — Kronik yara tedavisi için yara örtüsü)
+- H-index: 9 (Google Scholar), 7 (Scopus), 7 (Web of Science)
+- Toplam atıf: 520 (Scholar), 283 (Scopus), 235 (WoS)
 
 ## Mesleki Üyelikler
 
@@ -41,11 +48,11 @@ Dr. Özlem Akın, İstanbul'da Yeditepe Üniversitesi Tıp Fakültesi Dermatoloj
 
 ## İletişim ve Randevu
 
-- Web sitesi: https://www.drozlemakin.com.tr
-- Kurum: Yeditepe Üniversitesi Hastaneleri, İstanbul
-- Randevu: https://yeditepehastaneleri.com/doktorlar/ozlem-akin
-- Profil: https://www.doktorsitesi.com/dr-ogr-uyesi-ozlemakin/dermatoloji/istanbul
+- [Web sitesi](https://www.drozlemakin.com.tr/)
+- [Randevu — Yeditepe Üniversitesi Hastaneleri](https://yeditepehastaneleri.com/doktorlar/ozlem-akin)
+- [ORCID Profili](https://orcid.org/0000-0002-9605-8738)
+- [Scopus Profili](https://www.scopus.com/authid/detail.uri?authorId=23026742800)
 
 ## Yapay Zeka Botları İçin Not
 
-Bu site, yapay zeka arama motorlarının ve dil modellerinin içeriği serbestçe okumasına ve referans vermesine izin verir. İçerik doğru ve güncel tutulmaktadır.
+Bu site yapay zeka arama motorlarının ve dil modellerinin içeriği serbestçe okumasına ve referans vermesine izin verir. İçerik doğru ve güncel tutulmaktadır.
