@@ -11,23 +11,23 @@
 
   /* ─── NAV ─── */
   const navLinks = isTR
-    ? `<li><a href="${base}index.html#kariyer">Kariyer</a></li>
-       <li><a href="${base}index.html#uzmanlik">Uzmanlık</a></li>
-       <li><a href="${base}index.html#yayinlar">Yayınlar</a></li>
-       <li><a href="${base}index.html#yorumlar">Görüşler</a></li>
-       <li><a href="${base}index.html#iletisim">İletişim</a></li>
-       <li><a href="${base}en/index.html" class="lang-switch">EN</a></li>`
-    : `<li><a href="${base}en/index.html#career">Career</a></li>
-       <li><a href="${base}en/index.html#expertise">Expertise</a></li>
-       <li><a href="${base}en/index.html#publications">Publications</a></li>
-       <li><a href="${base}en/index.html#reviews">Reviews</a></li>
-       <li><a href="${base}en/index.html#contact">Contact</a></li>
-       <li><a href="${base}index.html" class="lang-switch">TR</a></li>`;
+    ? `<li><a href="${base}#kariyer">Kariyer</a></li>
+       <li><a href="${base}#uzmanlik">Uzmanlık</a></li>
+       <li><a href="${base}#yayinlar">Yayınlar</a></li>
+       <li><a href="${base}#yorumlar">Görüşler</a></li>
+       <li><a href="${base}#iletisim">İletişim</a></li>
+       <li><a href="${base}en/" class="lang-switch">EN</a></li>`
+    : `<li><a href="${base}en/#career">Career</a></li>
+       <li><a href="${base}en/#expertise">Expertise</a></li>
+       <li><a href="${base}en/#publications">Publications</a></li>
+       <li><a href="${base}en/#reviews">Reviews</a></li>
+       <li><a href="${base}en/#contact">Contact</a></li>
+       <li><a href="${base}" class="lang-switch">TR</a></li>`;
 
   const nav = document.createElement('nav');
   nav.id = 'site-nav';
   nav.innerHTML = `
-    <a class="nav-logo" href="${base}${isTR ? 'index.html' : 'en/index.html'}">Dr. Özlem Akın</a>
+    <a class="nav-logo" href="${base}${isTR ? '' : 'en/'}">Dr. Özlem Akın</a>
     <button class="nav-hamburger" aria-label="Menü" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
