@@ -19,5 +19,5 @@ Allow: /
 
 # Discovery
 Sitemap: https://www.drozlemakin.com.tr/sitemap.xml
-LLMs: https://www.drozlemakin.com.tr/llms.txt
-AI: https://www.drozlemakin.com.tr/ai.txt
+# llms.txt: https://www.drozlemakin.com.tr/llms.txt
+# ai.txt: https://www.drozlemakin.com.tr/ai.txt
