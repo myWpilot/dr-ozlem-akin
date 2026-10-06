@@ -25,12 +25,14 @@
     ? `<li>${a('/#kariyer',            'Kariyer')}</li>
        <li>${a('/uzmanlik-alanlari/',  'Uzmanlık Alanları')}</li>
        <li>${a('/yayinlar/',           'Yayınlar')}</li>
+       <li>${a('/hakkinda/',           'Hakkında')}</li>
        <li>${a('/#yorumlar',           'Görüşler')}</li>
        <li>${a('/#iletisim',           'İletişim')}</li>
        <li>${a('/en/',                 'EN', 'lang-switch')}</li>`
     : `<li>${a('/en/#career',          'Career')}</li>
        <li>${a('/en/expertise/',       'Expertise')}</li>
        <li>${a('/en/publications/',    'Publications')}</li>
+       <li>${a('/en/about/',           'About')}</li>
        <li>${a('/en/#reviews',         'Reviews')}</li>
        <li>${a('/en/#contact',         'Contact')}</li>
        <li>${a('/',                    'TR', 'lang-switch')}</li>`;
