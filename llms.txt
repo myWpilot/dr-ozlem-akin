@@ -5,7 +5,9 @@
 ## Sayfalar
 
 - [Ana Sayfa](https://www.drozlemakin.com.tr/)
+- [Yayınlar](https://www.drozlemakin.com.tr/yayinlar/)
 - [English Version](https://www.drozlemakin.com.tr/en/)
+- [Publications (EN)](https://www.drozlemakin.com.tr/en/publications/)
 
 ## Hakkında
 
@@ -38,6 +40,35 @@ Dr. Özlem Akın, İstanbul'da Yeditepe Üniversitesi Tıp Fakültesi Dermatoloj
 - 1 patent (TR 2025 002367 A1 — Kronik yara tedavisi için yara örtüsü)
 - H-index: 9 (Google Scholar), 7 (Scopus), 7 (Web of Science)
 - Toplam atıf: 520 (Scholar), 283 (Scopus), 235 (WoS)
+
+## Yayınlar — Uluslararası Makaleler
+
+- A1: Akın Ö, Tanrıöver Ö. "Psychological and behavioral burden of scabies: a comprehensive cross-sectional analysis of pruritus, anxiety, behavioral adaptation, and quality of life." BMC Prim Care. 2026;27(1):273. DOI: 10.1186/s12875-026-03417-z
+- A2: Akın Ö, Taşkapan MO, Cömert Erkılınç A, Tanrıöver Ö. "Clinical Factors Associated with Disease Severity in Symptomatic Dermographism: A Cross-Sectional Study." Medicina (Kaunas). 2026;62(5):862. DOI: 10.3390/medicina62050862
+- A3: Akın Ö, Taşkapan MO, Tanrıöver Ö. "Prolonged Post-Scabietic Pruritus: Clinical Characteristics and Unmet Management Needs in a Real-World Cohort." J Clin Med. 2026;15(9):3211. DOI: 10.3390/jcm15093211
+- A4: Demir YD, Tepeli D, Güvensen MD, Soyer F, Akın Ö, Kehr NS. "The Impact of Oxygen and Antimicrobial Tea Tree Oil Carrying Biomaterial on Cell Viability Under Hypoxic Conditions." Biotechnol Bioeng. 2026;123(1):222-234. DOI: 10.1002/bit.70083
+- A5: Akin O, Keskin A. "Association Between Rhesus-D Blood Group and Vitiligo." Dermatology Review/Przegląd Dermatologiczny. 2025;112(3):210-211. DOI: 10.5114/dr.2025.154816
+- A6: Ersan M, Ozer E, Akin O, Tasli PN, Sahin F. "Effectiveness of exosome treatment in androgenetic alopecia: outcomes of a prospective study." Aesthetic Plast Surg. 2024;1-10. DOI: 10.1007/s00266-024-04332-3
+- A7: Taşkapan O, Gökçe E, Akın O, Erkılınç AC, Demirkesen C. "Dowling-Degos disease with diffuse penile pigmentation." J Eur Acad Dermatol Venereol. 2014;28(10):1405-6.
+- A8: Cömert A, Akbaş B, Kılıç EZ, Akın Ö, Gökçe E, Göktuna Z, Taşkapan O. "Psychiatric comorbidities and alexithymia in patients with seborrheic dermatitis: a questionnaire study in Turkey." Am J Clin Dermatol. 2013;14(4):335-42.
+- A9: Comert A, Akin O, Demirkesen C, Taskapan O. "Eosinophilic panniculitis in the areas of previous allergen immunotherapy: a 'recall panniculitis'?" Eur J Dermatol. 2011;21(4):647-8.
+- A10: Sahin S, Comert A, Akin O, Ayalp S, Karsidag S. "Cutaneous drug eruptions by current antiepileptics: case reports and alternative treatment options." Clin Neuropharmacol. 2008;31(2):93-6.
+- A11: Sahin S, Comert A, Akin O, Ayalp S, Karsidag S. "Painless burn injury caused by post-traumatic syringomyelia." Ir J Med Sci. 2008;177(4):405-7.
+- A12: Asuman C, Ozlem A, Burçak T, Onder P. "An unusual location of basal cell carcinoma: the clitoris and the vulva." Indian J Dermatol. 2008;53(4):192-4.
+- A13: Comert A, Akin O, Demirkesen C. "Follicular mucinosis mimicking lichen spinulosus in an 11-year-old boy." Eur J Dermatol. 2007;17(6):544-5.
+- A14: Seckin D, Demircay Z, Akin O. "Generalized pruritus treated with narrowband UVB." Int J Dermatol. 2007;46(4):367-70.
+- A15: Seckin D, Gurbuz O, Akin O. "Metronidazole 0.75% gel vs. ketoconazole 2% cream in the treatment of facial seborrheic dermatitis: a randomized, double-blind study." J Eur Acad Dermatol Venereol. 2007;21(3):345-50.
+- A16: Kus S, Ergun T, Gun D, Akin O. "Intralesional tuberculin for treatment of refractory warts." J Eur Acad Dermatol Venereol. 2005;19(4):515-6.
+
+## Yayınlar — Ulusal Makaleler
+
+- U1: Z Akın, O Akın, S Hıdıroğlu, O Tanrıöver. "Awareness of podological treatment methods and treatment preferences in individuals with ingrown toenails: A cross-sectional study from Turkiye." North Clin Istanb. 2026;13(4):434-440.
+- U2: Ö Akın, P Baltacı, Ş Peker, S Hıdıroğlu, Ö Tanrıöver. "Medical Students' Knowledge, Attitudes, and Behaviors Regarding Skin Cancer, Sun Exposure, and Vitamin D: An Evaluation for Curriculum Integration." Tıp Eğitimi Dünyası. 2026;25(76):56-65.
+- U3: O Akın, O Tanrıöver, M Yücekaya. "Seborrheic dermatitis in intensive care unit patients: A cross-sectional study of prevalence, severity, and associated clinical factors." North Clin Istanb. 2026;13(3):351-358.
+- U4: O Akın, D Yücelten. "Efficacy of Intralesional Purified Protein Derivative (PPD) in Refractory Warts: A Randomized Placebo-Controlled Study." ACH Med J. 2025;4:124-132.
+- U5: Aydoğ E, Öztürk G, Cömert A, Taşdelen N, Akın O, Kulcu DG. "Sacroiliitis during isotretinoin treatment: Causal association or coincidence?" North Clin Istanb. 2019;6(1):75-80.
+- U6: Akın Ö. "Mastositoz ve Mast Hücre Aktivasyon Sendromları." Turkiye Klinikleri J Dermatol-Special Topics. 2015;8(1):84-90.
+- U7: Cömert Erkılınç A, Akın Ö. "Bebek ve çocuklarda sık görülen dermatozlar." Klinik Gelişim Dermatoloji. 2009;s:6-13.
 
 ## Mesleki Üyelikler
 
@@ -91,6 +122,7 @@ Tıp Fakültesi Dönem V ve Diş Hekimliği Fakültesi Dönem IV öğrencilerine
 - ORCID: 0000-0002-9605-8738
 - Scopus Author ID: 23026742800
 - Web of Science ResearcherID: JNE-5849-2023
+- Google Scholar: https://scholar.google.com/citations?user=stip7tUAAAAJ
 
 ## İletişim ve Randevu
 
