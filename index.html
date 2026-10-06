@@ -217,12 +217,15 @@
     .container { max-width: 1100px; margin: 0 auto; }
 
     /* ── TIMELINE ── */
-    .timeline { display: flex; flex-direction: column; max-width: 720px; }
-    .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem 2rem; padding: 1.5rem 0; border-bottom: 1px solid #E5EAF0; }
-    @media (max-width: 560px) { .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; } }
-    .timeline-date { font-size: 0.8rem; color: #1A5FB8; font-weight: 500; padding-top: 0.15rem; white-space: nowrap; }
-    .timeline-content h3 { font-size: 1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.2rem; }
-    .timeline-content p { font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
+    .timeline { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 1.5rem; max-width: 720px; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(to bottom, var(--blue), #C5D8F8); border-radius: 2px; }
+    .timeline-item { position: relative; padding: 0 0 1.75rem 1.25rem; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .tl-dot { position: absolute; left: -1.97rem; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); border: 2px solid white; box-shadow: 0 0 0 2px var(--blue); }
+    .tl-years { font-size: 0.72rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
+    .tl-title { font-size: 0.98rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.1rem; }
+    .tl-place { font-size: 0.88rem; color: #6B7280; }
+    .tl-note { font-size: 0.82rem; color: var(--text-body); margin-top: 0.3rem; font-style: italic; }
     .badge { display: inline-block; font-size: 0.72rem; font-weight: 500; background: #EEF4FD; color: #1A5FB8; border-radius: 20px; padding: 0.2rem 0.65rem; margin-bottom: 0.4rem; }
 
     /* ── MEMBERSHIPS ── */
@@ -353,41 +356,35 @@
     <h2 class="section-title">Deneyim & <em>Eğitim</em></h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-date">2008 – Günümüz</div>
-        <div class="timeline-content">
-          <span class="badge">Mevcut Görev</span>
-          <h3>Yeditepe Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı · Dr. Öğretim Üyesi<br><strong>Eğitim Sorumlusu</strong> — asistan hekimlerin eğitim programından sorumlu</p>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-years">2008 — Günümüz</div>
+        <div class="tl-title">Dr. Öğretim Üyesi · Eğitim Sorumlusu</div>
+        <div class="tl-place">Yeditepe Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2005 – 2008</div>
-        <div class="timeline-content">
-          <h3>Maltepe Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı · Dr. Öğretim Görevlisi / Üyesi</p>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-years">2005 — 2008</div>
+        <div class="tl-title">Dr. Öğretim Görevlisi / Üyesi</div>
+        <div class="tl-place">Maltepe Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2000 – 2005</div>
-        <div class="timeline-content">
-          <span class="badge">Uzmanlık · 2005</span>
-          <h3>Marmara Üniversitesi Tıp Fakültesi</h3>
-          <p>Dermatoloji Anabilim Dalı · Tıpta Uzmanlık Eğitimi<br>Tez: Geleneksel tedaviye dirençli siğillerde intralezyonel PPD'nin etkinliğinin plasebo ile karşılaştırılması · Danışman: Doç. Dr. Deniz Yücelten</p>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-years">2000 — 2005</div>
+        <div class="tl-title">Tıpta Uzmanlık — Dermatoloji</div>
+        <div class="tl-place">Marmara Üniversitesi Tıp Fakültesi, Dermatoloji Anabilim Dalı</div>
+        <div class="tl-note">Tez: Geleneksel tedaviye dirençli siğillerde intralezyonel PPD'nin etkinliğinin plasebo ile karşılaştırılması · Danışman: Doç. Dr. Deniz Yücelten</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">1999 – 2000</div>
-        <div class="timeline-content">
-          <h3>Kocaeli Üniversitesi Tıp Fakültesi</h3>
-          <p>Çocuk Cerrahisi Anabilim Dalı · Araştırma Görevlisi</p>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-years">1999 — 2000</div>
+        <div class="tl-title">Araştırma Görevlisi</div>
+        <div class="tl-place">Kocaeli Üniversitesi Tıp Fakültesi, Çocuk Cerrahisi Anabilim Dalı</div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">1991 – 1998</div>
-        <div class="timeline-content">
-          <h3>Marmara Üniversitesi Tıp Fakültesi</h3>
-          <p>Tıp Fakültesi Lisans · Tıp Doktoru (MD)</p>
-        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-years">1991 — 1998</div>
+        <div class="tl-title">Tıp Fakültesi Lisans</div>
+        <div class="tl-place">Marmara Üniversitesi Tıp Fakültesi</div>
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;">
