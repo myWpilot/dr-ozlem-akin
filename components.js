@@ -12,13 +12,13 @@
   /* ─── NAV ─── */
   const navLinks = isTR
     ? `<li><a href="${base}#kariyer">Kariyer</a></li>
-       <li><a href="${base}#uzmanlik">Uzmanlık</a></li>
+       <li><a href="/uzmanlik-alanlari/">Uzmanlık Alanları</a></li>
        <li><a href="/yayinlar/">Yayınlar</a></li>
        <li><a href="${base}#yorumlar">Görüşler</a></li>
        <li><a href="${base}#iletisim">İletişim</a></li>
        <li><a href="${base}en/" class="lang-switch">EN</a></li>`
     : `<li><a href="${base}en/#career">Career</a></li>
-       <li><a href="${base}en/#expertise">Expertise</a></li>
+       <li><a href="/en/expertise/">Expertise</a></li>
        <li><a href="/en/publications/">Publications</a></li>
        <li><a href="${base}en/#reviews">Reviews</a></li>
        <li><a href="${base}en/#contact">Contact</a></li>
