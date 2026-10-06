@@ -1,27 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ANA SAYFA / HOME -->
   <url>
     <loc>https://www.drozlemakin.com.tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/"/>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.drozlemakin.com.tr/yayinlar/</loc>
+    <loc>https://www.drozlemakin.com.tr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/"/>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- UZMANLIK ALANLARI / EXPERTISE -->
+  <url>
+    <loc>https://www.drozlemakin.com.tr/uzmanlik-alanlari/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/uzmanlik-alanlari/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/expertise/"/>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.drozlemakin.com.tr/en/</loc>
+    <loc>https://www.drozlemakin.com.tr/en/expertise/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/uzmanlik-alanlari/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/expertise/"/>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- YAYINLAR / PUBLICATIONS -->
+  <url>
+    <loc>https://www.drozlemakin.com.tr/yayinlar/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/yayinlar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/publications/"/>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.drozlemakin.com.tr/en/publications/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/yayinlar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/publications/"/>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- HAKKINDA / ABOUT -->
+  <url>
+    <loc>https://www.drozlemakin.com.tr/hakkinda/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/hakkinda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/about/"/>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.drozlemakin.com.tr/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.drozlemakin.com.tr/hakkinda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.drozlemakin.com.tr/en/about/"/>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

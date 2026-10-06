@@ -4,7 +4,7 @@
     "name": "Dr. Özlem Akın - Dermatoloji Uzmanı / Dermatologist",
     "languages": ["tr", "en"],
     "crawlFrequency": "Weekly",
-    "suggestedCrawlPages": ["/", "/en/", "/yayinlar/", "/en/publications/"],
+    "suggestedCrawlPages": ["/", "/en/", "/uzmanlik-alanlari/", "/en/expertise/", "/yayinlar/", "/en/publications/", "/hakkinda/", "/en/about/"],
     "lastUpdated": "2026-10-06",
     "contact": "ozlem.akin@yeditepe.edu.tr"
   },

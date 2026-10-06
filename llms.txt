@@ -5,9 +5,13 @@
 ## Sayfalar
 
 - [Ana Sayfa](https://www.drozlemakin.com.tr/)
+- [Uzmanlık Alanları](https://www.drozlemakin.com.tr/uzmanlik-alanlari/)
 - [Yayınlar](https://www.drozlemakin.com.tr/yayinlar/)
+- [Hakkında / Akademik CV](https://www.drozlemakin.com.tr/hakkinda/)
 - [English Version](https://www.drozlemakin.com.tr/en/)
+- [Expertise (EN)](https://www.drozlemakin.com.tr/en/expertise/)
 - [Publications (EN)](https://www.drozlemakin.com.tr/en/publications/)
+- [About / Academic CV (EN)](https://www.drozlemakin.com.tr/en/about/)
 
 ## Hakkında
 
